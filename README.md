@@ -19,7 +19,7 @@ Ce site présente :
 Déploiement
 
 Ce site est hébergé via **GitHub Pages**  
-[https://TON-PSEUDO.github.io/NOM-DU-REPO](https://TON-PSEUDO.github.io/NOM-DU-REPO)
+[https://PurPPle77.github.io/ParaZyte-website](https://PurPPle77.github.io/ParaZyte-website)
 
 ---
 
@@ -45,13 +45,13 @@ Tous les contenus suivants sont **la propriété de leurs auteurs** respectifs :
 
  Équipe Parazyte
 
-Brulard Allan (Game Designer, Programmer, Project Leader) : https://www.linkedin.com/in/allan-brulard-9111a119b/
-Drai Antoine (Sound Designer) : https://sefar.bandcamp.com/ https://loki7ruins.wixsite.com/sefar
-Sarrazin Thomas (3D Artist) : https://www.linkedin.com/in/thomas-sarrazin-1953022a5/
-Lamoureux Gaétan (3D Artist) : https://www.linkedin.com/in/ga%C3%A9tan-lamoureux-016206226/
-Campana Maëlle (Concept Artist) : https://www.artstation.com/lapoupie
-Forestello Joël (QA Tester, Dev Web Front-End) : https://www.linkedin.com/in/purpple-9b1b7b197/
-Bertrand Justine (Logo + Flyers) : https://www.instagram.com/justinebertou/
+- Brulard Allan (Game Designer, Programmer, Project Leader) : https://www.linkedin.com/in/allan-brulard-9111a119b/
+- Drai Antoine (Sound Designer) : https://sefar.bandcamp.com/ https://loki7ruins.wixsite.com/sefar
+- Sarrazin Thomas (3D Artist) : https://www.linkedin.com/in/thomas-sarrazin-1953022a5/
+- Lamoureux Gaétan (3D Artist) : https://www.linkedin.com/in/ga%C3%A9tan-lamoureux-016206226/
+- Campana Maëlle (Concept Artist) : https://www.artstation.com/lapoupie
+- Bertrand Justine (Logo + Flyers) : https://www.instagram.com/justinebertou/
+- Forestello Joël (QA Tester, "Dev Web Front-End") : https://www.linkedin.com/in/purpple-9b1b7b197/
 
 
 
