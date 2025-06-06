@@ -25,10 +25,15 @@ Ce site est hébergé via **GitHub Pages**
 
 Licence
 
-Le **code HTML, CSS et JavaScript** de ce projet est sous licence **MIT**.  
-Tu peux l'utiliser, le modifier, le réutiliser librement, même pour un projet commercial.
+Ce site est publié sous licence **GNU General Public License v3.0**.
 
-> [MIT License](LICENSE)
+> L’ensemble des éléments — y compris le code HTML, CSS, JavaScript, les images, illustrations, modèles 3D, fichiers audio et vidéos — est couvert par cette licence.
+
+📢 Cela signifie que :
+- Vous pouvez **étudier, copier et modifier** ce site
+- Vous devez **redistribuer sous la même licence (GPL v3)** toute version modifiée
+- **Aucun usage commercial ou fermé** n’est permis sans libérer aussi le contenu
+Pour plus d’infos, voir [LICENSE](LICENSE)
 
 
 
