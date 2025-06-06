@@ -32,25 +32,26 @@ Tu peux l'utiliser, le modifier, le réutiliser librement, même pour un projet 
 
 
 
-## 🛑 Droits d’auteur
+Droits d’auteur
 
-⚠️ Tous les contenus suivants sont **la propriété de leurs auteurs** respectifs :
+Tous les contenus suivants sont **la propriété de leurs auteurs** respectifs :
 - Illustrations (2D et 3D)
 - Modèles `.glb`
 - Musiques, effets sonores
 - Logos et visuels
 
-📝 **Toute réutilisation est interdite sans autorisation préalable écrite.**
+**Toute réutilisation est interdite sans autorisation préalable écrite.**
 
 
  Équipe Parazyte
 
-- 🎮 **Allan Brulard** — Project lead, game designer
-- 🎨 **Thomas Sarrazin** — Concept artist 3D
-- 🖌️ **Maëlle Campana** — Illustratrice 2D
-- 🧑‍💻 **Gaétan Lamoureux** — Modeleur 3D
-- 🎧 **Antoine Drai** — Sound designer
-- 🖍️ **Justine Bertrand** — Graphiste (logo + print)
+Brulard Allan (Game Designer, Programmer, Project Leader) : https://www.linkedin.com/in/allan-brulard-9111a119b/
+Drai Antoine (Sound Designer) : https://sefar.bandcamp.com/ https://loki7ruins.wixsite.com/sefar
+Sarrazin Thomas (3D Artist) : https://www.linkedin.com/in/thomas-sarrazin-1953022a5/
+Lamoureux Gaétan (3D Artist) : https://www.linkedin.com/in/ga%C3%A9tan-lamoureux-016206226/
+Campana Maëlle (Concept Artist) : https://www.artstation.com/lapoupie
+Forestello Joël (QA Tester, Dev Web Front-End) : https://www.linkedin.com/in/purpple-9b1b7b197/
+Bertrand Justine (Logo + Flyers) : https://www.instagram.com/justinebertou/
 
 
 
