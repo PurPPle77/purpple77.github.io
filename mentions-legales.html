@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mention Légales</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="description" content="Site officiel du jeu Parazyte. Un shooter immersif où tout est destructible.">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:;">
+
+    <link rel="icon" href="./icons/logo_parazite.svg">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="p-0 d-flex flex-column min-vh-100">
+    <!-- ####### HEADER ######### -->
+    <header id="le-header" class="sticky-top background-color d-flex align-items-center mb-5">
+
+        <div class="d-block d-lg-none">
+            <button class="btn text-white burger-btn d-flex align-items-center justify-content-center p-0;"
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#menuBurger" aria-controls="menuBurger"
+                aria-label="Menu">
+                <img src="icons/burger.svg" alt="Menu" class="burger-icon">
+            </button>
+        </div>
+
+        <!-- menu offcanvas -->
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="menuBurger"
+            aria-labelledby="menuBurgerLabel">
+            <div class="offcanvas-header">
+                <a href="index.html" aria-label="Retour à l'accueil">
+                    <img id="off-logo" src="icons/logo_parazite.svg" alt="Logo Parazyte">
+                </a>
+                <h5 id="menuBurgerLabel" class="offcanvas-title d-none">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column justify-content-evenly align-items-center ms-2">
+                <a href="./equipe.html" class="dropdown-item">L'EQUIPE</a>
+                <a href=" https://allanbd.itch.io/parazyte " class="dropdown-item">DOWNLOAD</a>
+            </div>
+        </div>
+
+        <!-- menu visible desktop -->
+        <nav class="navbar d-none d-lg-flex flex-column justify-content-evenly align-items-center ms-2">
+            <a href="./equipe.html" class="dropdown-item">L'EQUIPE</a>
+            <a href=" https://allanbd.itch.io/parazyte " class="dropdown-item">DOWNLOAD</a>
+        </nav>
+
+        <!-- mobile -->
+        <div class="logo-mobile">
+            <a href="index.html" aria-label="Retour à l'accueil">
+                <img src="icons/logo_parazite.svg" alt="Logo Parazyte" class="logo-dépasse">
+            </a>
+        </div>
+
+        <!-- Desktop -->
+        <div class="logo-desktop">
+            <a href="index.html" aria-label="Retour à l'accueil">
+                <img src="icons/logo_parazite.svg" alt="Logo Parazyte" class="logo-dépasse">
+            </a>
+        </div>
+    </header>
+
+    <!-- ############################## MAIN ################################ -->
+    <main class="background-color container-fluid flex-grow-1">
+
+        <h1 class="text-center text-white p-3">Mentions légales</h1>
+
+        <article class="container text-white rounded p-4 shadow mt-4 mb-5 border-white">
+            <h2>Éditeur du site</h2>
+            <p>
+                Nom : Joël Forestello<br>
+                Site développé dans le cadre d’un projet de formation.
+            </p>
+
+            <h2>Responsable de la publication</h2>
+            <p>
+                Allan Brulard – Project Lead et directeur artistique du projet Parazyte
+            </p>
+
+            <h2>Développement et intégration</h2>
+            <p>
+                Joël Forestello – Intégration HTML/CSS, scripts JavaScript, et mise en page du site officiel de
+                Parazyte.
+            </p>
+
+            <h2>Contenus et éléments visuels</h2>
+            <p>
+                Fournis par Allan Brulard et l’équipe créative du projet Parazyte.<br>
+                Tous les visuels, textes, sons et modèles 3D sont la propriété de leurs auteurs respectifs.
+            </p>
+
+            <h2>Hébergement</h2>
+            <p>
+                Hébergeur : OVHcloud<br>
+                Adresse : 2 rue Kellermann – 59100 Roubaix – France<br>
+                Site : <a href="https://www.ovhcloud.com/fr/" target="_blank">www.ovhcloud.com</a>
+            </p>
+
+            <h2>Propriété intellectuelle</h2>
+            <p>
+                L’ensemble des éléments présents sur ce site (textes, images, vidéos, sons, modèles 3D, logos, etc.)
+                sont protégés
+                par le droit d’auteur.
+                Toute reproduction ou représentation sans autorisation est interdite.
+            </p>
+
+            <h2>Données personnelles</h2>
+            <p>
+                Ce site ne collecte aucune donnée personnelle.
+            </p>
+
+            <h2>Cookies</h2>
+            <p>
+                Ce site n’utilise pas de cookies de suivi ou d’analyse.
+            </p>
+
+        </article>
+
+    </main>
+
+    <footer class="mt-5 text-white background-color d-flex justify-content-between align-items-center px-1 py-3">
+
+        <div class="d-flex flex-column align-items-center footer-item">
+            <i class="bi bi-chat-square-text"></i>
+            <span><a href="/mentions-legales.html" class="text-white">Mentions légales</a></span>
+        </div>
+        <!-- ################## off canvas d'accessibilité ############################## -->
+        <button class="btn p-0 border-0 bg-transparent d-flex flex-column align-items-center footer-item" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#accessibilityMenu" aria-label="Accessibilité">
+            <i class="bi bi-person-wheelchair text-white"></i>
+            <span class="text-white text-center text-decoration-underline ">Options d’accessibilité</span>
+        </button>
+
+        <div class="offcanvas offcanvas-bottom text-white custom-accessibility" tabindex="-1" id="accessibilityMenu"
+            aria-labelledby="accessibilityMenuLabel">
+            <div class="offcanvas-header background-color">
+                <h5 class="offcanvas-title" id="accessibilityMenuLabel">Options d’accessibilité</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+            </div>
+
+            <div class="offcanvas-body background-color2 d-flex flex-column gap-3">
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="contrastToggle">
+                    <label class="form-check-label" for="contrastToggle">Contraste élevé</label>
+                </div>
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="fontSizeToggle">
+                    <label class="form-check-label" for="fontSizeToggle">Texte plus grand</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="d-flex flex-column align-items-center footer-item">
+            <i class="bi bi-c-circle"></i>
+            <span>J.F 2025</span>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
