@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maëlle Campana</title>
+    <title>Allan Brulard</title>
+
+
     <meta name="description" content="Site officiel du jeu Parazyte. Un shooter immersif où tout est destructible.">
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+
     <link rel="icon" href="./icons/logo_parazite.svg">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
 </head>
@@ -70,73 +74,99 @@
             Retour à l'équipe
         </a>
     </div>
-
     <!-- ############################## MAIN ################################ -->
-    <main class="flex-grow-1 background-color2">
+    <main class="flex-grow-1">
 
-        <div class="background-color2">
 
-            <div class="h1 text-center text-white p-2">Maëlle Campana</div>
 
-            <div class="background-color2">
+        <div class="background-color2 container-fluid">
 
-                <div class="row justify-content-center align-items-center p-2">
-                    <div class="col-12 col-lg-6">
-                        <div class="position-relative mx-auto">
-                            <img id="grosse-image" src="images_et_modeles/Maëlle/paysage_parasite.webp"
-                                class="img-fluid w-100 rounded" alt="visualiser">
-                            <button type="button" class="fullscreen-btn position-absolute bottom-0 end-0 m-2"
-                                aria-label="Voir en plein écran">
-                                <i class="bi bi-arrows-fullscreen"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+            <div class="h1 text-center text-white p-2">Allan Brulard</div>
 
-                <!-- Carousel thumbnails -->
-                <div class="row justify-content-center">
-                    <div class="col-12 d-flex justify-content-center align-items-center gap-2 m-2">
-                        <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="next"
-                            aria-label="Image suivante ">
-                            <i class="bi bi-chevron-double-left text-white"></i>
-                        </button>
-
-                        <div id="thumbCarousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-
-                                <!-- Slide 1 -->
-                                <div class="carousel-item active">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <img id="th-img1" src="images_et_modeles/Maëlle/paysage_parasite.webp"
-                                            class="img-thumbnail" alt="thumb 1">
-                                        <img id="th-img2"
-                                            src="images_et_modeles/Maëlle/doc_parasite_level_1_versBleu.webp"
-                                            class="img-thumbnail" alt="thumb 2">
-                                    </div>
-                                </div>
-
-                                <!-- Slide 2 -->
-                                <div class="carousel-item">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <img id="th-img3"
-                                            src="images_et_modeles/Maëlle/doc_parasite_level_1_versRouge.webp"
-                                            class="img-thumbnail" alt="thumb 3">
-                                        <img id="th-img4"
-                                            src="images_et_modeles/Maëlle/doc_parasite_level_1process.webp"
-                                            class="img-thumbnail" alt="thumb 4">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="prev"
-                            aria-label="Image précédente">
-                            <i class="bi bi-chevron-double-right text-white"></i>
+            <div class="row justify-content-center align-items-center p-2">
+                <div class="col-12 col-lg-6">
+                    <div class="position-relative mx-auto">
+                        <img id="grosse-image" src="images_et_modeles/Gaétan/Rendu_Vaisseau.webp"
+                            class="img-fluid w-100 rounded" alt="visualiser">
+                        <button type="button" class="fullscreen-btn position-absolute bottom-0 end-0 m-2"
+                            aria-label="Voir en plein écran">
+                            <i class="bi bi-arrows-fullscreen"></i>
                         </button>
                     </div>
                 </div>
             </div>
+
+            <!-- Carousel thumbnails -->
+            <div class="row justify-content-center">
+                <div class="col-12 d-flex justify-content-center align-items-center gap-2 m-2">
+                    <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="next"
+                        aria-label="Image suivante ">
+                        <i class="bi bi-chevron-double-left text-black"></i>
+                    </button>
+
+                    <div id="thumbCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="d-flex justify-content-center gap-2">
+                                    <img id="th-img1" src="images_et_modeles/Gaétan/Concept_Parasite.webp"
+                                        class="img-thumbnail" alt="thumb 1">
+                                    <img id="th-img2" src="images_et_modeles/Thomas/Batiment1_1_Neutre.webp"
+                                        class="img-thumbnail" alt="thumb 2">
+                                </div>
+                            </div>
+
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center gap-2">
+                                    <img id="th-img3" src="images_et_modeles/Thomas/Batiment1_2_Neutre.webp"
+                                        class="img-thumbnail" alt="thumb 3">
+                                    <img id="th-img4" src="images_et_modeles/Thomas/Batiment1_2_Neutre.webp"
+                                        class="img-thumbnail" alt="thumb 4">
+                                </div>
+                            </div>
+
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="d-flex justify-content-center gap-2">
+                                    <img id="th-img5" src="images_et_modeles/Thomas/Batiment1_1_Neutre.webp"
+                                        class="img-thumbnail" alt="thumb 5">
+                                    <img id="th-img6" src="images_et_modeles/Gaétan/Rendu_Vaisseau.webp"
+                                        class="img-thumbnail" alt="thumb 6">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="prev"
+                        aria-label="Image précédente">
+                        <i class="bi bi-chevron-double-right text-black"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- ###################### VIEWER3d ############################# -->
+
+        <div class="background-color3 container-fluid">
+
+            <div class="d-flex justify-content-center">
+                <model-viewer id="vue3D" src="/images_et_modeles/Gaétan/Vaisseau.glb" alt="Modèle 3D"
+                    shadow-intensity="1" camera-controls touch-action="pan-y" auto-rotate></model-viewer>
+            </div>
+            <div class="d-flex justify-content-center gap-5">
+                <button type="button" id="prevModel" class="chevronav" aria-label="modèle précédent">
+                    <i class="bi bi-chevron-double-left text-white"></i>
+                </button>
+                <button type="button" id="nextModel" class="chevronav" aria-label="modèle suivant">
+                    <i class="bi bi-chevron-double-right text-white"></i>
+                </button>
+            </div>
+
         </div>
 
     </main>

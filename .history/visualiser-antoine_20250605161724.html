@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maëlle Campana</title>
+    <title>Antoine Drai</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="description" content="Site officiel du jeu Parazyte. Un shooter immersif où tout est destructible.">
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+
     <link rel="icon" href="./icons/logo_parazite.svg">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.min.css" rel="stylesheet">
@@ -15,7 +18,8 @@
 
 </head>
 
-<body class="p-0 d-flex flex-column min-vh-100">
+
+<body class="p-0">
     <!-- ####### HEADER ######### -->
     <header id="le-header" class="sticky-top background-color d-flex align-items-center mb-5">
 
@@ -62,6 +66,9 @@
                 <img src="icons/logo_parazite.svg" alt="Logo Parazyte" class="logo-dépasse">
             </a>
         </div>
+
+        <!-- ############################################################## -->
+
     </header>
 
     <div class="d-flex justify-content-start ms-2 my-2">
@@ -72,74 +79,78 @@
     </div>
 
     <!-- ############################## MAIN ################################ -->
-    <main class="flex-grow-1 background-color2">
+    <main>
 
-        <div class="background-color2">
+        <!-- ############################## GALERIE ############################## -->
+        <div class="background-color2 container-fluid">
 
-            <div class="h1 text-center text-white p-2">Maëlle Campana</div>
+            <div class="h1 text-center text-white p-2 ">Antoine Drai</div>
 
-            <div class="background-color2">
+            <div class="h2 text-white p-2">La musique :</div>
+            <div class="container p-5">
+                <h4 class="text-white">Destroy the paraZyte !</h4>
+                <audio controls class="w-100">
+                    <source src="antoine_zik/Destroy the parazyte !.wav" type="audio/mpeg">
+                    Votre navigateur ne supporte pas la lecture audio.
+                </audio>
+                <p class="text-white mt-2">Morceau principal du jeu.</p>
+            </div>
+        </div>
+        <div class="background-color3 container-fluid">
+            <div class="h2 text-white p-2 ">Les effets sonores :</div>
 
-                <div class="row justify-content-center align-items-center p-2">
-                    <div class="col-12 col-lg-6">
-                        <div class="position-relative mx-auto">
-                            <img id="grosse-image" src="images_et_modeles/Maëlle/paysage_parasite.webp"
-                                class="img-fluid w-100 rounded" alt="visualiser">
-                            <button type="button" class="fullscreen-btn position-absolute bottom-0 end-0 m-2"
-                                aria-label="Voir en plein écran">
-                                <i class="bi bi-arrows-fullscreen"></i>
-                            </button>
-                        </div>
+            <div class="row justify-content-center mt-2">
+                <div class="row justify-content-center mt-2">
+                    <div
+                        class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center p-2 flex-column">
+                        <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
+                        <small class="text-white mt-2 text-center">
+                            <a href="http://www.freepik.com" class="text-white text-decoration-underline"
+                                target="_blank" rel="noopener noreferrer">
+                                Designed by starline / Freepik
+                            </a>
+                        </small>
+                    </div>
+                    <div
+                        class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start align-items-center p-2 flex-column">
+                        <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
+                        <small class="text-white mt-2 text-center">
+                            <a href="http://www.freepik.com" class="text-white text-decoration-underline"
+                                target="_blank" rel="noopener noreferrer">
+                                Designed by starline / Freepik
+                            </a>
+                        </small>
                     </div>
                 </div>
 
-                <!-- Carousel thumbnails -->
-                <div class="row justify-content-center">
-                    <div class="col-12 d-flex justify-content-center align-items-center gap-2 m-2">
-                        <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="next"
-                            aria-label="Image suivante ">
-                            <i class="bi bi-chevron-double-left text-white"></i>
-                        </button>
-
-                        <div id="thumbCarousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
-
-                                <!-- Slide 1 -->
-                                <div class="carousel-item active">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <img id="th-img1" src="images_et_modeles/Maëlle/paysage_parasite.webp"
-                                            class="img-thumbnail" alt="thumb 1">
-                                        <img id="th-img2"
-                                            src="images_et_modeles/Maëlle/doc_parasite_level_1_versBleu.webp"
-                                            class="img-thumbnail" alt="thumb 2">
-                                    </div>
-                                </div>
-
-                                <!-- Slide 2 -->
-                                <div class="carousel-item">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <img id="th-img3"
-                                            src="images_et_modeles/Maëlle/doc_parasite_level_1_versRouge.webp"
-                                            class="img-thumbnail" alt="thumb 3">
-                                        <img id="th-img4"
-                                            src="images_et_modeles/Maëlle/doc_parasite_level_1process.webp"
-                                            class="img-thumbnail" alt="thumb 4">
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="prev"
-                            aria-label="Image précédente">
-                            <i class="bi bi-chevron-double-right text-white"></i>
-                        </button>
+                <div class="row justify-content-center mt-2">
+                    <div
+                        class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center p-2 flex-column">
+                        <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
+                        <small class="text-white mt-2 text-center">
+                            <a href="http://www.freepik.com" class="text-white text-decoration-underline"
+                                target="_blank" rel="noopener noreferrer">
+                                Designed by starline / Freepik
+                            </a>
+                        </small>
+                    </div>
+                    <div
+                        class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start align-items-center p-2 flex-column">
+                        <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
+                        <small class="text-white mt-2 text-center">
+                            <a href="http://www.freepik.com" class="text-white text-decoration-underline"
+                                target="_blank" rel="noopener noreferrer">
+                                Designed by starline / Freepik
+                            </a>
+                        </small>
                     </div>
                 </div>
             </div>
         </div>
 
     </main>
+
+    <!-- ############################################################## -->
 
     <div class="d-flex justify-content-start ms-2 my-2">
         <a href="equipe.html" class="btn btn-outline-secondary d-inline-flex align-items-center">
@@ -148,8 +159,7 @@
         </a>
     </div>
 
-    <!-- ############################# footer ################################## -->
-
+    <!-- ############################################################## -->
     <footer class="text-white background-color d-flex justify-content-between align-items-center px-1 py-3">
         <div class="d-flex flex-column align-items-center footer-item">
             <i class="bi bi-chat-square-text"></i>
@@ -193,6 +203,7 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="js/script1.js"></script>
 
 
 </body>

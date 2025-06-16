@@ -1,5 +1,5 @@
 
-// On attend que toute la structure HTML soit chargée avant d'exécuter le code (fonction englobant tout le ficher JS)
+// On attend que toute la structure HTML soit chargée avant d'exécuter le code
 window.addEventListener("DOMContentLoaded", function () {
 
     // ####################### CACHER LE HEADER AU SCROLL ########################

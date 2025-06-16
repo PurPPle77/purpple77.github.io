@@ -4,10 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maëlle Campana</title>
+    <title>Justine Bertrand</title>
+
+
     <meta name="description" content="Site officiel du jeu Parazyte. Un shooter immersif où tout est destructible.">
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+
     <link rel="icon" href="./icons/logo_parazite.svg">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/bootstrap-icons.min.css" rel="stylesheet">
@@ -64,6 +67,8 @@
         </div>
     </header>
 
+    <!-- ############################################################## -->
+
     <div class="d-flex justify-content-start ms-2 my-2">
         <a href="equipe.html" class="btn btn-outline-secondary d-inline-flex align-items-center">
             <i class="bi bi-arrow-90deg-left me-2"></i>
@@ -74,67 +79,50 @@
     <!-- ############################## MAIN ################################ -->
     <main class="flex-grow-1 background-color2">
 
-        <div class="background-color2">
+        <div class="background-color2 container-fluid">
 
-            <div class="h1 text-center text-white p-2">Maëlle Campana</div>
+            <div class="h1 text-center text-white p-2">Justine Bertrand</div>
 
-            <div class="background-color2">
-
-                <div class="row justify-content-center align-items-center p-2">
-                    <div class="col-12 col-lg-6">
-                        <div class="position-relative mx-auto">
-                            <img id="grosse-image" src="images_et_modeles/Maëlle/paysage_parasite.webp"
-                                class="img-fluid w-100 rounded" alt="visualiser">
-                            <button type="button" class="fullscreen-btn position-absolute bottom-0 end-0 m-2"
-                                aria-label="Voir en plein écran">
-                                <i class="bi bi-arrows-fullscreen"></i>
-                            </button>
-                        </div>
+            <div class="row justify-content-center align-items-center p-2">
+                <div class="col-12 col-lg-6">
+                    <div class="position-relative mx-auto">
+                        <img id="grosse-image" src="images_et_modeles/Justine/flyer1.webp"
+                            class="img-fluid w-100 rounded" alt="visualiser">
+                        <button type="button" class="fullscreen-btn position-absolute bottom-0 end-0 m-2"
+                            aria-label="Voir en plein écran">
+                            <i class="bi bi-arrows-fullscreen"></i>
+                        </button>
                     </div>
                 </div>
+            </div>
 
-                <!-- Carousel thumbnails -->
-                <div class="row justify-content-center">
-                    <div class="col-12 d-flex justify-content-center align-items-center gap-2 m-2">
-                        <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="next"
-                            aria-label="Image suivante ">
-                            <i class="bi bi-chevron-double-left text-white"></i>
-                        </button>
+            <!-- Carousel thumbnails -->
+            <div class="row justify-content-center">
+                <div class="col-12 d-flex justify-content-center align-items-center gap-2 m-2">
+                    <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="next"
+                        aria-label="Image suivante ">
+                        <i class="bi bi-chevron-double-left text-white"></i>
+                    </button>
 
-                        <div id="thumbCarousel" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner">
+                    <div id="thumbCarousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
 
-                                <!-- Slide 1 -->
-                                <div class="carousel-item active">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <img id="th-img1" src="images_et_modeles/Maëlle/paysage_parasite.webp"
-                                            class="img-thumbnail" alt="thumb 1">
-                                        <img id="th-img2"
-                                            src="images_et_modeles/Maëlle/doc_parasite_level_1_versBleu.webp"
-                                            class="img-thumbnail" alt="thumb 2">
-                                    </div>
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="d-flex justify-content-center gap-2">
+                                    <img id="th-img1" src="images_et_modeles/Justine/flyer1.webp" class="img-thumbnail"
+                                        alt="thumb 1">
+                                    <img id="th-img2" src="images_et_modeles/Justine/flyer2.webp" class="img-thumbnail"
+                                        alt="thumb 2">
                                 </div>
-
-                                <!-- Slide 2 -->
-                                <div class="carousel-item">
-                                    <div class="d-flex justify-content-center gap-2">
-                                        <img id="th-img3"
-                                            src="images_et_modeles/Maëlle/doc_parasite_level_1_versRouge.webp"
-                                            class="img-thumbnail" alt="thumb 3">
-                                        <img id="th-img4"
-                                            src="images_et_modeles/Maëlle/doc_parasite_level_1process.webp"
-                                            class="img-thumbnail" alt="thumb 4">
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
-
-                        <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="prev"
-                            aria-label="Image précédente">
-                            <i class="bi bi-chevron-double-right text-white"></i>
-                        </button>
                     </div>
+
+                    <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="prev"
+                        aria-label="Image précédente">
+                        <i class="bi bi-chevron-double-right text-white"></i>
+                    </button>
                 </div>
             </div>
         </div>
