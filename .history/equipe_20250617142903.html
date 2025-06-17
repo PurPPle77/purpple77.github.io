@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Équipe Parazyte</title>
+    <meta name="description" content="Site officiel du jeu Parazyte. Un shooter immersif où tout est destructible.">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:;">
+    <link rel="icon" href="./icons/logo_parazite.svg">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="p-0 min-vh-100"> <!--  pour forcer le remplissage du viewport à 100% -->
+
+    <!-- ####### HEADER ######### -->
+    <header id="le-header" class="sticky-top background-color d-flex align-items-center mb-5">
+
+        <div class="d-block d-lg-none">
+            <button class="btn text-white burger-btn d-flex align-items-center justify-content-center p-0;"
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#menuBurger" aria-controls="menuBurger"
+                aria-label="Menu">
+                <img src="icons/burger.svg" alt="Menu" class="burger-icon">
+            </button>
+        </div>
+
+        <!-- menu offcanvas -->
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="menuBurger"
+            aria-labelledby="menuBurgerLabel">
+            <div class="offcanvas-header">
+                <a href="index.html" aria-label="Retour à l'accueil">
+                    <img id="off-logo" src="icons/logo_parazite.svg" alt="Logo Parazyte">
+                </a>
+                <h5 id="menuBurgerLabel" class="offcanvas-title d-none">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column justify-content-evenly align-items-center ms-2">
+                <a href="./index.html" class="dropdown-item">ACCUEIL</a>
+                <a href=" https://allanbd.itch.io/parazyte " class="dropdown-item">DOWNLOAD</a>
+            </div>
+        </div>
+
+        <!-- menu visible desktop -->
+        <nav class="navbar d-none d-lg-flex flex-column justify-content-evenly align-items-center ms-2">
+            <a href="./index.html" class="dropdown-item">ACCUEIL</a>
+            <a href=" https://allanbd.itch.io/parazyte " class="dropdown-item">DOWNLOAD</a>
+        </nav>
+
+        <!-- mobile -->
+        <div class="logo-mobile d-block d-lg-none">
+            <a href="index.html" aria-label="Retour à l'accueil">
+                <img src="icons/logo_parazite.svg" alt="Logo Parazyte" class="logo-dépasse">
+            </a>
+        </div>
+
+        <!-- Desktop -->
+        <div class="logo-desktop d-none d-lg-block">
+            <a href="index.html" aria-label="Retour à l'accueil">
+                <img src="icons/logo_parazite.svg" alt="Logo Parazyte" class="logo-dépasse">
+            </a>
+        </div>
+    </header>
+
+    <!-- ###################### FIN HEADER ################################# -->
+
+    <main>
+        <div class="background-color container-fluid text-white pt-2">
+            <div class="container">
+                <div class="row justify-content-center align-items-center">
+                    <div class="pitch col-12 justify-content-center align-items-center my-3">
+                        <h2 class="text-center">L'ÉQUIPE</h2>
+                        <p class="text-center">Au cours de notre parcours dans
+                            l'école, des affinités se sont créés, ce qui nous a
+                            motivé pour créer ce projet ensemble. Chacun a pu apporter son savoir faire.
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="background-color3 container-fluid ">
+
+            <!-- ################################# caroussel mobile ################################# -->
+            <div id="carouselExampleFade" class="carousel slide d-lg-none d-block" data-bs-interval="6000"
+                data-bs-ride="carousel">
+
+                <div class="carousel-inner">
+
+                    <!-- carte 1 -->
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center">
+
+                            <div class="card text-white background-color4 m-2">
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <button type="button" class="chevronav" data-bs-target="#carouselExampleFade"
+                                        data-bs-slide="prev" aria-label="Précédent">
+                                        <i class="bi bi-chevron-double-left text-white fs-1"></i>
+                                    </button>
+                                    <img src="icons/pilot(7).png" class="card-img-top mx-auto py-3 rounded-circle"
+                                        alt="Allan Brulard">
+                                    <button type="button" class="chevronav" data-bs-target="#carouselExampleFade"
+                                        data-bs-slide="next" aria-label="Suivant">
+                                        <i class="bi bi-chevron-double-right text-white fs-1"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title text-center fs-2">Allan Brulard</h2>
+                                    <h6 class="card-subtitle mb-2 text-white fs-6 text-center">Project lead, Game
+                                        Designer/Programmer</h6>
+                                    <p class="card-text p-2 fst-italic">"Ancien fan d'un jeu mobile ayant bien marché à
+                                        l'époque
+                                        (Smash Hit), j'ai décidé de reprendre le coeur du gameplay de ce
+                                        jeu afin de l'adapter à la plateforme pc".
+                                    </p>
+                                </div>
+                                <div class="d-flex justify-content-center gap-5 text-white p-0">
+                                    <a href="https://www.linkedin.com/in/allan-brulard-9111a119b/"
+                                        class="text-white fs-1" aria-label="Lien vers LinkedIn">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a href="https://www.notion.so/Brulard-Allan-1ede7715916080d08860e44009fa1099?source=copy_link"
+                                        class="text-white" aria-label="Lien vers Notion">
+                                        <svg class="contraste-jaune mb-1" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 50 50" width="38" height="38" fill="currentColor">
+                                            <path
+                                                d="M44.62 13.13c-.23-.21-.52-.33-.83-.33-.02 0-.05.01-.08.01l-29.86 1.92c-.63.04-1.13.58-1.13 1.21v28.75c0 .34.14.65.38.88.25.23.57.35.91.33l29.86-1.93C44.51 43.93 45 43.4 45 42.76V14.02C45 13.68 44.87 13.36 44.62 13.13zM38.11 20.92c-.6.19-.79.2-.79.2v17.24c-1.02.55-1.86.81-2.74.81-1.07 0-1.68-.24-2.5-1.5-1.74-2.69-7.41-11.81-7.41-11.81v11.45l2.23.47c0 0-.06 1.3-2.01 1.45-1.71.13-5.44.32-5.44.32 0-.47.1-1.12.84-1.31.35-.09 1.4-.37 1.4-.37V22.42h-2.24c0-1.03.3-1.83 1.38-1.91l5.79-.33 7.73 11.92V21.49l-2.24-.19c0-.93.9-1.5 1.67-1.58l5.04-.28C38.82 20.09 38.79 20.7 38.11 20.92zM4.98 8.54l5.74 5.74v29.54L5.6 37.66c-.41-.58-.62-1.25-.62-1.96V8.54zM42.72 10.91l-29.06 1.83c-.99.07-1.95-.3-2.65-.99L6.24 6.97l27.19-1.89c.81-.07 1.62.17 2.28.66L42.72 10.91z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- carte 2 -->
+                    <div class="carousel-item">
+
+                        <div class="d-flex justify-content-center">
+                            <div class="card text-white background-color4 m-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button type="button" class="chevronav" data-bs-target="#carouselExampleFade"
+                                        data-bs-slide="prev" aria-label="Précédent">
+                                        <i class="bi bi-chevron-double-left text-white fs-1"></i>
+                                    </button>
+                                    <img src="icons/pilot(2).png" class="card-img-top mx-auto py-3 rounded-circle"
+                                        alt="Thomas Sarrazin">
+                                    <button type="button" class="chevronav" data-bs-target="#carouselExampleFade"
+                                        data-bs-slide="next" aria-label="Suivant">
+                                        <i class="bi bi-chevron-double-right text-white fs-1"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">Thomas Sarrazin</h2>
+                                    <h6 class="card-subtitle mb-2 text-white fs-6 text-center">Concept Artist
+                                        3D/Game
+                                        Artist</h6>
+                                    <p class="card-text p-2 fst-italic">"Après mes études de Game Art, j'ai décidé de
+                                        rejoindre le
+                                        projet ParaZyte afin de me perfectionner dans mon domaine".</p>
+                                </div>
+                                <a href="visualiser-thomas.html"
+                                    class="card-body d-flex justify-content-end align-items-center gap-0 p-0 text-decoration-none">
+                                    <span class="rounded-pill bg-light text-dark p-1">Ses apports au projet</span>
+                                    <i class="bi bi-arrow-right-circle fs-custom text-white pe-1 bat-coeur"></i>
+                                </a>
+                                <div class="d-flex justify-content-center gap-5 fs-1 text-white p-0">
+                                    <a href="https://www.linkedin.com/in/thomas-sarrazin-1953022a5/"
+                                        aria-label="Lien vers LinkedIn"><i class="bi bi-linkedin text-white"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- carte 3 -->
+                    <div class="carousel-item">
+
+                        <div class="d-flex justify-content-center">
+                            <div class="card text-white background-color4 m-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button type="button" class="chevronav" data-bs-target="#carouselExampleFade"
+                                        data-bs-slide="prev" aria-label="Précédent">
+                                        <i class="bi bi-chevron-double-left text-white fs-1"></i>
+                                    </button>
+                                    <img src="icons/femme.png" class="card-img-top mx-auto py-3 rounded-circle"
+                                        alt="Maëlle Campana">
+                                    <button type="button" class="chevronav" data-bs-target="#carouselExampleFade"
+                                        data-bs-slide="next" aria-label="Suivant">
+                                        <i class="bi bi-chevron-double-right text-white fs-1"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">Maëlle Campana</h2>
+                                    <h6 class="card-subtitle mb-2 text-white fs-6 text-center">Concept Artist
+                                        2D/Illustrator</h6>
+                                    <p class="card-text p-2 fst-italic">A la fin de mes études d'illustration, j'ai
+                                        décidé de
+                                        rejoindre le projet pour aider à conceptualiser les parasites.</p>
+                                </div>
+                                <a href="visualiser-maëlle.html"
+                                    class="card-body d-flex justify-content-end align-items-center gap-0 p-0 text-decoration-none">
+                                    <span class="rounded-pill bg-light text-dark p-1">Ses apports au projet</span>
+                                    <i class="bi bi-arrow-right-circle fs-custom text-white pe-1 bat-coeur"></i>
+                                </a>
+                                <div class="d-flex justify-content-center gap-5 fs-1 text-white p-0">
+                                    <a href="https://www.artstation.com/lapoupie" aria-label="Lien vers Artstation">
+                                        <svg class="contraste-jaune" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 21.122" width="40" height="40" role="img"
+                                            aria-label="Logo ArtStation">
+                                            <title>ArtStation icon</title>
+                                            <path fill="currentColor"
+                                                d="M0,16.284l2.027,3.505h0.001a2.424,2.424,0,0,0,2.164,1.333H17.649l-2.792-4.838Zm24,0.025c0-.484-.143-.935-.388-1.314L15.728,1.289A2.424,2.424,0,0,0,13.586,0H9.419L21.598,21.101,23.518,17.776C23.896,17.139,24,16.857,24,16.309Zm-11.129-3.462L7.428,3.419,1.984,12.847Z" />
+                                        </svg>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- carte 4 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="card text-white background-color4 m-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button type="button" class="chevronav" data-bs-target="#carouselExampleFade"
+                                        data-bs-slide="prev" aria-label="Précédent">
+                                        <i class="bi bi-chevron-double-left text-white fs-1"></i>
+                                    </button>
+                                    <img src="icons/male.png" class="card-img-top mx-auto py-3 rounded-circle"
+                                        alt="Gaétan Lamoureux">
+                                    <button type="button" class="chevronav" data-bs-target="#carouselExampleFade"
+                                        data-bs-slide="next" aria-label="Suivant">
+                                        <i class="bi bi-chevron-double-right text-white fs-1"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">Gaétan Lamoureux</h2>
+                                    <h6 class="card-subtitle mb-2 text-white fs-6 text-center">Concept Artist 3D/game
+                                        Artist</h6>
+                                    <p class="card-text p-2 fst-italic">"Après mes études d'animation et de test QA,
+                                        j'ai décidé de
+                                        rejoindre le projet ParaZyte afin d'apprendre de nouvelles
+                                        choses".</p>
+                                </div>
+                                <a href="visualiser-gaetan.html"
+                                    class="card-body d-flex justify-content-end align-items-center gap-0 p-0 text-decoration-none">
+                                    <span class="rounded-pill bg-light text-dark p-1">Ses apports au projet</span>
+                                    <i class="bi bi-arrow-right-circle fs-custom text-white pe-1 bat-coeur"></i>
+                                </a>
+                                <div class="d-flex justify-content-center gap-5 fs-1 text-white p-0">
+                                    <a href="https://www.linkedin.com/in/ga%C3%A9tan-lamoureux-016206226/"
+                                        class="text-white" aria-label="Lien vers LinkedIn"><i
+                                            class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- carte 5 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="card text-white background-color4 m-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button type="button" class="chevronav" data-bs-target="#carouselExampleFade"
+                                        data-bs-slide="prev" aria-label="Précédent">
+                                        <i class="bi bi-chevron-double-left text-white fs-1"></i>
+                                    </button>
+                                    <img src="icons/woman.png" class="card-img-top mx-auto py-3 rounded-circle"
+                                        alt="Justine Bertrand">
+                                    <button type="button" class="chevronav" data-bs-target="#carouselExampleFade"
+                                        data-bs-slide="next" aria-label="Suivant">
+                                        <i class="bi bi-chevron-double-right text-white fs-1"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">Justine Bertrand</h2>
+                                    <h6 class="card-subtitle mb-2 text-white fs-6 text-center">Graphic Designer</h6>
+                                    <p class="card-text p-2 fst-italic">"J'ai été contacté par Allan de manière
+                                        ponctuelle pour
+                                        faire le logo du jeu ainsi que des flyers / affiches pour un
+                                        évènement dans lequel ParaZyte était présent".</p>
+                                </div>
+                                <a href="visualiser-justine.html"
+                                    class="card-body d-flex justify-content-end align-items-center gap-0 p-0 text-decoration-none">
+                                    <span class="rounded-pill bg-light text-dark p-1">Ses apports au projet</span>
+                                    <i class="bi bi-arrow-right-circle fs-custom text-white pe-1 bat-coeur"></i>
+                                </a>
+                                <div class="d-flex justify-content-center gap-5 fs-1 text-white p-0">
+                                    <a href="https://www.instagram.com/justinebertou/" class="text-white"
+                                        aria-label="Lien vers Instagram"><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- carte 6 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center">
+                            <div class="card text-white background-color4 m-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <button type="button" class="chevronav" data-bs-target="#carouselExampleFade"
+                                        data-bs-slide="prev" aria-label="Précédent">
+                                        <i class="bi bi-chevron-double-left text-white fs-1"></i>
+                                    </button>
+                                    <img src="icons/homme2.png" class="card-img-top mx-auto py-3 rounded-circle"
+                                        alt="Antoine Drai">
+                                    <button type="button" class="chevronav" data-bs-target="#carouselExampleFade"
+                                        data-bs-slide="next" aria-label="Suivant">
+                                        <i class="bi bi-chevron-double-right text-white fs-1"></i>
+                                    </button>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">Antoine Drai</h2>
+                                    <h6 class="card-subtitle mb-2 text-white fs-6 text-center">Sound Designer</h6>
+                                    <p class="card-text p-2 fst-italic">""Spécialisé en musiques horrifiques et sci-fi,
+                                        je compose pour le jeu vidéo, l’animation et le sound design."".</p>
+                                </div>
+                                <a href="visualiser-antoine.html"
+                                    class="card-body d-flex justify-content-end align-items-center gap-0 p-0 text-decoration-none">
+                                    <span class="rounded-pill bg-light text-dark p-1">Ses apports au projet</span>
+                                    <i class="bi bi-arrow-right-circle fs-custom text-white pe-1 bat-coeur"></i>
+                                </a>
+                                <div class="d-flex justify-content-center gap-5 fs-1 text-white p-0">
+                                    <a href="https://sefar.bandcamp.com/ " aria-label="Lien vers BandCamp">
+                                        <svg class="contraste-jaune mb-2" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                            viewBox="0 0 97.75 97.75">
+                                            <path d="M48.875,0C21.882,0,0,21.882,0,48.875S21.882,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.868,0,48.875,0z
+                                                M64.835,70.857H12.593l20.32-43.965h52.244L64.835,70.857z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://loki7ruins.wixsite.com/sefar " aria-label="Lien vers wix">
+                                        <svg class="contraste-jaune" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 14 14" width="40" height="40" fill="currentColor" role="img"
+                                            focusable="false" aria-hidden="true">
+                                            <path
+                                                d="m 8.375875,4.6692047 c 0,0.24431 0.039,0.61294 -0.53775,0.82181 -0.1785,0.0647 -0.2990625,0.18113 -0.2990625,0.18113 0,-0.58125 0.0885,-0.79163 0.32625,-0.91613 0.1828125,-0.0958 0.5105625,-0.0868 0.5105625,-0.0868 z m -2.17125,0.66638 -0.642,2.48737 -0.534,-2.03569 c -0.1441875,-0.59981 -0.3901875,-0.90993 -0.9080625,-0.90993 -0.5131875,0 -0.762375,0.30337 -0.9080625,0.90993 l -0.534,2.03569 -0.642,-2.48737 C 1.9324375,4.8345847 1.447375,4.6180147 1,4.6742647 l 1.2294375,4.64869 c 0,0 0.4055625,0.0292 0.608625,-0.0743 0.266625,-0.13594 0.393375,-0.24075 0.5548125,-0.87319 0.1438125,-0.56381 0.5458125,-2.22018 0.5835,-2.33812 0.08925,-0.28013 0.2079375,-0.25894 0.28875,0 0.036938,0.11812 0.4396875,1.77431 0.5835,2.33812 0.16125,0.63244 0.2881875,0.73725 0.5548125,0.87319 0.202875,0.1035 0.608625,0.0743 0.608625,0.0743 L 7.2415,4.6742647 c -0.457875,-0.0576 -0.934125,0.16744 -1.036875,0.66132 z m 2.170875,0.0977 c 0,0 -0.076875,0.11888 -0.252375,0.21694 -0.1126875,0.063 -0.220875,0.10575 -0.3369375,0.16144 -0.283875,0.13612 -0.247125,0.26156 -0.247125,0.66 l 0,2.85131 c 0,0 0.3103125,0.0392 0.5131875,-0.0643 0.2611875,-0.13313 0.3211875,-0.26156 0.323625,-0.83963 l 0,-2.81756 -3.75e-4,1.9e-4 0,-0.16838 z m 3.0645,1.5765 1.56,-2.32012 c 0,0 -0.658313,-0.11213 -0.984375,0.18469 -0.249375,0.22687 -0.457687,0.55406 -1.015875,1.35881 -0.0088,0.0137 -0.117187,0.19762 -0.245062,0 -0.549188,-0.79181 -0.7650005,-1.13044 -1.0158755,-1.35881 -0.3260625,-0.29682 -0.984375,-0.18469 -0.984375,-0.18469 l 1.5600005,2.32012 -1.555688,2.313 c 0,0 0.6856875,0.0866 1.0115625,-0.21018 0.2154375,-0.19613 0.3296255,-0.38194 0.9845625,-1.326 0.127688,-0.19725 0.235688,-0.0144 0.245063,0 0.551249,0.79462 0.735562,1.08862 0.996375,1.326 0.326062,0.29681 0.99975,0.21018 0.99975,0.21018 L 11.44,7.0097647 Z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ##################################### caroussel pc ############################################### -->
+            <div id="carouselDesktop" class="carousel slide d-none d-lg-block" data-bs-ride="carousel"
+                data-bs-interval="6000">
+
+                <div class="carousel-inner">
+
+                    <!-- Slide 1 -->
+                    <div class="carousel-item active">
+                        <div class="d-flex justify-content-center flex-wrap">
+
+                            <!-- Carte 1 -->
+                            <div class="card text-white background-color4 m-2">
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <img src="icons/oldhomme.png" class="card-img-top mx-auto py-3 rounded-circle"
+                                        alt="Allan Brulard">
+
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">Thomas Sarrazin</h2>
+                                    <h6 class="card-subtitle mb-2 text-white fs-6 text-center">Concept Artist 3D/Game
+                                        Artist</h6>
+
+                                    <p class="card-text p-2 fst-italic">"Après mes études de Game Art, j'ai décidé de
+                                        rejoindre
+                                        le projet ParaZyte afin de me perfectionner dans mon domaine.".
+                                    </p>
+
+                                </div>
+                                <a href="visualiser-thomas.html"
+                                    class="card-body d-flex justify-content-end align-items-center gap-0 p-0 text-decoration-none">
+                                    <span class="rounded-pill bg-light text-dark p-1">Ses apports au projet</span>
+                                    <i class="bi bi-arrow-right-circle fs-custom text-white pe-1 bat-coeur"></i>
+                                </a>
+                                <div class="d-flex justify-content-center gap-5 fs-1 text-white p-0">
+                                    <a href="https://www.linkedin.com/in/thomas-sarrazin-1953022a5/" class="text-white"
+                                        aria-label="Lien vers LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- carte 2 -->
+                            <div class="card text-white background-color4 m-2">
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <img src="icons/male.png" class="card-img-top mx-auto py-3 rounded-circle"
+                                        alt="Allan Brulard">
+
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">Allan Brulard</h2>
+                                    <h6 class="card-subtitle mb-2 text-white text-center">Project lead, Game
+                                        Designer/Programmer</h6>
+                                    <p class="card-text p-2 fst-italic">"Ancien fan d'un jeu mobile ayant bien marché
+                                        à
+                                        l'époque
+                                        (Smash Hit), j'ai décidé de reprendre le coeur du gameplay de ce
+                                        jeu afin de l'adapter à la plateforme pc".
+                                    </p>
+                                </div>
+                                <div class="d-flex justify-content-center gap-5 text-white p-0">
+                                    <a href="https://www.linkedin.com/in/allan-brulard-9111a119b/"
+                                        class="text-white fs-1" aria-label="Lien vers LinkedIn">
+                                        <i class="bi bi-linkedin"></i>
+                                    </a>
+                                    <a href="https://www.notion.so/Brulard-Allan-1ede7715916080d08860e44009fa1099?source=copy_link"
+                                        class="text-white" aria-label="Lien vers Notion">
+                                        <svg class="contraste-jaune mt-1" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 50 50" width="50" height="50" fill="currentColor">
+                                            <path
+                                                d="M44.62 13.13c-.23-.21-.52-.33-.83-.33-.02 0-.05.01-.08.01l-29.86 1.92c-.63.04-1.13.58-1.13 1.21v28.75c0 .34.14.65.38.88.25.23.57.35.91.33l29.86-1.93C44.51 43.93 45 43.4 45 42.76V14.02C45 13.68 44.87 13.36 44.62 13.13zM38.11 20.92c-.6.19-.79.2-.79.2v17.24c-1.02.55-1.86.81-2.74.81-1.07 0-1.68-.24-2.5-1.5-1.74-2.69-7.41-11.81-7.41-11.81v11.45l2.23.47c0 0-.06 1.3-2.01 1.45-1.71.13-5.44.32-5.44.32 0-.47.1-1.12.84-1.31.35-.09 1.4-.37 1.4-.37V22.42h-2.24c0-1.03.3-1.83 1.38-1.91l5.79-.33 7.73 11.92V21.49l-2.24-.19c0-.93.9-1.5 1.67-1.58l5.04-.28C38.82 20.09 38.79 20.7 38.11 20.92zM4.98 8.54l5.74 5.74v29.54L5.6 37.66c-.41-.58-.62-1.25-.62-1.96V8.54zM42.72 10.91l-29.06 1.83c-.99.07-1.95-.3-2.65-.99L6.24 6.97l27.19-1.89c.81-.07 1.62.17 2.28.66L42.72 10.91z" />
+                                        </svg>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                            <!-- Carte 3 -->
+                            <div class="card text-white background-color4 m-2">
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <img src="icons/homme.png" class="card-img-top mx-auto py-3 rounded-circle"
+                                        alt="Gaétan Lamoureux">
+
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">Gaétan Lamoureux</h2>
+                                    <h6 class="card-subtitle mb-2 text-white fs-6 text-center">Concept Artist 3D/Game
+                                        Artist</h6>
+                                    <p class="card-text p-2 fst-italic">"Après mes études d'animation et de test QA,
+                                        j'ai
+                                        rejoint le
+                                        projet
+                                        ParaZyte afin d'apprendre de nouvelles choses".</p>
+                                </div>
+                                <a href="visualiser-gaetan.html"
+                                    class="card-body d-flex justify-content-end align-items-center gap-0 p-0 text-decoration-none">
+                                    <span class="rounded-pill bg-light text-dark p-1">Ses apports au projet</span>
+                                    <i class="bi bi-arrow-right-circle fs-custom text-white pe-1 bat-coeur"></i>
+                                </a>
+                                <div class="d-flex justify-content-center gap-5 fs-1 text-white p-0">
+                                    <a href="https://www.linkedin.com/in/ga%C3%A9tan-lamoureux-016206226/"
+                                        class="text-white" aria-label="Lien vers LinkedIn"><i
+                                            class="bi bi-linkedin"></i></a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="carousel-item">
+                        <div class="d-flex justify-content-center flex-wrap">
+                            <!-- Carte 4 -->
+                            <div class="card text-white background-color4 m-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img src="icons/femme.png" class="card-img-top mx-auto py-3 rounded-circle"
+                                        alt="Maëlle Campana">
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">Maëlle Campana</h2>
+                                    <h6 class="card-subtitle mb-2 text-white fs-6 text-center">Concept Artist
+                                        2D/Illustrator</h6>
+                                    <p class="card-text p-2 fst-italic">"À la fin de mes études d'illustration, j'ai
+                                        rejoint le
+                                        projet pour
+                                        aider à conceptualiser les parasites".</p>
+                                </div>
+                                <a href="visualiser-maëlle.html"
+                                    class="card-body d-flex justify-content-end align-items-center gap-0 p-0 text-decoration-none">
+                                    <span class="rounded-pill bg-light text-dark p-1">Ses apports au projet</span>
+                                    <i class="bi bi-arrow-right-circle fs-custom text-white pe-1 bat-coeur"></i>
+                                </a>
+                                <div class="d-flex justify-content-center gap-5 fs-1 p-0">
+                                    <a href="https://www.artstation.com/lapoupie" aria-label="Lien vers Artstation">
+                                        <svg class="contraste-jaune" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 21.122" width="40" height="40" role="img"
+                                            aria-label="Logo ArtStation">
+                                            <title>ArtStation icon</title>
+                                            <path fill="currentColor"
+                                                d="M0,16.284l2.027,3.505h0.001a2.424,2.424,0,0,0,2.164,1.333H17.649l-2.792-4.838Zm24,0.025c0-.484-.143-.935-.388-1.314L15.728,1.289A2.424,2.424,0,0,0,13.586,0H9.419L21.598,21.101,23.518,17.776C23.896,17.139,24,16.857,24,16.309Zm-11.129-3.462L7.428,3.419,1.984,12.847Z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Carte 5 -->
+                            <div class=" card text-white background-color4 m-2">
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <img src="icons/woman.png" class="card-img-top mx-auto py-3 rounded-circle"
+                                        alt="Justine Bertrand">
+
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">Justine Bertrand</h2>
+                                    <h6 class="card-subtitle mb-2 text-white fs-6 text-center">Graphic
+                                        Designer</h6>
+                                    <p class="card-text p-2 fst-italic">"J'ai été contactée par Allan
+                                        pour faire le logo
+                                        du jeu
+                                        ainsi que des
+                                        flyers / affiches pour un évènement".</p>
+                                </div>
+                                <a href="visualiser-justine.html"
+                                    class="card-body d-flex justify-content-end align-items-center gap-0 p-0 text-decoration-none">
+                                    <span class="rounded-pill bg-light text-dark p-1">Ses apports au
+                                        projet</span>
+                                    <i class="bi bi-arrow-right-circle fs-custom text-white pe-1 bat-coeur"></i>
+                                </a>
+                                <div class="d-flex justify-content-center gap-5 fs-1 text-white p-0">
+                                    <a href="https://www.instagram.com/justinebertou/" class="text-white"
+                                        aria-label="Lien vers Instagram"><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+
+                            <!-- Carte 6 -->
+                            <div class="card text-white background-color4 m-2">
+                                <div class="d-flex justify-content-between align-items-center">
+
+                                    <img src="icons/homme2.png" class="card-img-top mx-auto py-3 rounded-circle"
+                                        alt="Antoine Drai">
+
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title text-center">Antoine Drai</h2>
+                                    <h6 class="card-subtitle mb-2 text-white fs-6 text-center">Sound Designer</h6>
+                                    <p class="card-text p-2 fst-italic">"Spécialisé en musiques horrifiques et
+                                        sci-fi,
+                                        je compose pour le jeu vidéo, l’animation et le sound design.".</p>
+                                </div>
+                                <a href="visualiser-antoine.html"
+                                    class="card-body d-flex justify-content-end align-items-center gap-0 p-0 text-decoration-none">
+                                    <span class="rounded-pill bg-light text-dark p-1">Ses apports au projet</span>
+                                    <i class="bi bi-arrow-right-circle fs-custom text-white pe-1 bat-coeur"></i>
+                                </a>
+                                <div class="d-flex justify-content-center gap-5 fs-1 text-white p-0">
+                                    <a href="https://sefar.bandcamp.com/ " aria-label="Lien vers BandCamp">
+                                        <svg class="contraste-jaune" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg" width="35" height="35"
+                                            viewBox="0 0 97.75 97.75">
+                                            <path d="M48.875,0C21.882,0,0,21.882,0,48.875S21.882,97.75,48.875,97.75S97.75,75.868,97.75,48.875S75.868,0,48.875,0z
+                                                 M64.835,70.857H12.593l20.32-43.965h52.244L64.835,70.857z" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://loki7ruins.wixsite.com/sefar " aria-label="Lien vers wix">
+                                        <svg class="contraste-jaune" xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 14 14" width="40" height="40" fill="currentColor" role="img"
+                                            focusable="false" aria-hidden="true">
+                                            <path
+                                                d="m 8.375875,4.6692047 c 0,0.24431 0.039,0.61294 -0.53775,0.82181 -0.1785,0.0647 -0.2990625,0.18113 -0.2990625,0.18113 0,-0.58125 0.0885,-0.79163 0.32625,-0.91613 0.1828125,-0.0958 0.5105625,-0.0868 0.5105625,-0.0868 z m -2.17125,0.66638 -0.642,2.48737 -0.534,-2.03569 c -0.1441875,-0.59981 -0.3901875,-0.90993 -0.9080625,-0.90993 -0.5131875,0 -0.762375,0.30337 -0.9080625,0.90993 l -0.534,2.03569 -0.642,-2.48737 C 1.9324375,4.8345847 1.447375,4.6180147 1,4.6742647 l 1.2294375,4.64869 c 0,0 0.4055625,0.0292 0.608625,-0.0743 0.266625,-0.13594 0.393375,-0.24075 0.5548125,-0.87319 0.1438125,-0.56381 0.5458125,-2.22018 0.5835,-2.33812 0.08925,-0.28013 0.2079375,-0.25894 0.28875,0 0.036938,0.11812 0.4396875,1.77431 0.5835,2.33812 0.16125,0.63244 0.2881875,0.73725 0.5548125,0.87319 0.202875,0.1035 0.608625,0.0743 0.608625,0.0743 L 7.2415,4.6742647 c -0.457875,-0.0576 -0.934125,0.16744 -1.036875,0.66132 z m 2.170875,0.0977 c 0,0 -0.076875,0.11888 -0.252375,0.21694 -0.1126875,0.063 -0.220875,0.10575 -0.3369375,0.16144 -0.283875,0.13612 -0.247125,0.26156 -0.247125,0.66 l 0,2.85131 c 0,0 0.3103125,0.0392 0.5131875,-0.0643 0.2611875,-0.13313 0.3211875,-0.26156 0.323625,-0.83963 l 0,-2.81756 -3.75e-4,1.9e-4 0,-0.16838 z m 3.0645,1.5765 1.56,-2.32012 c 0,0 -0.658313,-0.11213 -0.984375,0.18469 -0.249375,0.22687 -0.457687,0.55406 -1.015875,1.35881 -0.0088,0.0137 -0.117187,0.19762 -0.245062,0 -0.549188,-0.79181 -0.7650005,-1.13044 -1.0158755,-1.35881 -0.3260625,-0.29682 -0.984375,-0.18469 -0.984375,-0.18469 l 1.5600005,2.32012 -1.555688,2.313 c 0,0 0.6856875,0.0866 1.0115625,-0.21018 0.2154375,-0.19613 0.3296255,-0.38194 0.9845625,-1.326 0.127688,-0.19725 0.235688,-0.0144 0.245063,0 0.551249,0.79462 0.735562,1.08862 0.996375,1.326 0.326062,0.29681 0.99975,0.21018 0.99975,0.21018 L 11.44,7.0097647 Z" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="carousel-control-prev justify-content-end" type="button"
+                    data-bs-target="#carouselDesktop" data-bs-slide="prev">
+                    <i class="bi bi-chevron-double-left text-black fs-1"></i>
+                    <span class="visually-hidden">Précédent</span>
+                </button>
+                <button class="carousel-control-next justify-content-start" type="button"
+                    data-bs-target="#carouselDesktop" data-bs-slide="next">
+                    <i class="bi bi-chevron-double-right text-black fs-1"></i>
+                    <span class="visually-hidden">Suivant</span>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- ################################ <footer> ############################################## -->
+
+    </main>
+
+    <footer class="mt-4 text-white background-color d-flex justify-content-between align-items-center px-1 py-3">
+        <div class="d-flex flex-column align-items-center footer-item">
+            <i class="bi bi-chat-square-text"></i>
+            <span><a href="/mentions-legales.html" class="text-white">Mentions légales</a></span>
+        </div>
+
+        <button class="btn p-1 bg-black d-flex flex-column align-items-center footer-item" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#accessibilityMenu" aria-label="Accessibilité">
+            <i class="bi bi-person-wheelchair text-white"></i>
+            <span class="text-white text-center text-decoration-underline ">Options d’accessibilité</span>
+        </button>
+
+        <!-- ################## fin off canvas d'accessibilité ############################## -->
+        <div class="offcanvas offcanvas-bottom text-white custom-accessibility" tabindex="-1" id="accessibilityMenu"
+            aria-labelledby="accessibilityMenuLabel">
+            <div class="offcanvas-header background-color">
+                <h5 class="offcanvas-title" id="accessibilityMenuLabel">Options d’accessibilité</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+            </div>
+
+            <div class="offcanvas-body background-color2 d-flex flex-column gap-3">
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="contrastToggle">
+                    <label class="form-check-label" for="contrastToggle">Contraste élevé</label>
+                </div>
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="fontSizeToggle">
+                    <label class="form-check-label" for="fontSizeToggle">Texte plus grand</label>
+                </div>
+
+            </div>
+        </div>
+        <!-- ################## fin off canvas d'accessibilité ############################## -->
+        <div class="d-flex flex-column align-items-center footer-item">
+            <i class="bi bi-c-circle"></i>
+            <span>J.F 2025</span>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thomas Sarrazin</title>
+    <meta name="description" content="Site officiel du jeu Parazyte. Un shooter immersif où tout est destructible.">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <link rel="icon" href="./icons/logo_parazite.svg">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+<body class="p-0 min-vh-100"> <!--  pour forcer le remplissage du viewport à 100% -->
+
+
+    <!-- ############################### TOAST MESSAGE POUR INDIQUER QUE L'AR NE MARCHE PAS SUR FIREFOX ################################# -->
+    <div class="position-fixed bottom-0">
+        <div id="toastFirefox" class="toast align-items-center text-white bg-danger" role="alert" aria-live="assertive"
+            aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    <strong>Réalité Aug. non disponible sur Firefox.</strong><br>
+                    Utilisez Chrome ou autre pour la tester.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                    aria-label="Fermer"></button>
+            </div>
+        </div>
+    </div>
+    <!-- ######################################################################### -->
+
+    <!-- ####### HEADER ######### -->
+    <header id="le-header" class="sticky-top background-color d-flex align-items-center mb-5">
+
+        <div class="d-block d-lg-none">
+            <button class="btn text-white burger-btn d-flex align-items-center justify-content-center p-0;"
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#menuBurger" aria-controls="menuBurger"
+                aria-label="Menu">
+                <img src="icons/burger.svg" alt="Menu" class="burger-icon">
+            </button>
+        </div>
+
+        <!-- menu offcanvas -->
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="menuBurger"
+            aria-labelledby="menuBurgerLabel">
+            <div class="offcanvas-header">
+                <a href="index.html" aria-label="Retour à l'accueil">
+                    <img id="off-logo" src="icons/logo_parazite.svg" alt="Logo Parazyte">
+                </a>
+                <h5 id="menuBurgerLabel" class="offcanvas-title d-none">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column justify-content-evenly align-items-center ms-2">
+                <a href="./equipe.html" class="dropdown-item">L'EQUIPE</a>
+                <a href=" https://allanbd.itch.io/parazyte " class="dropdown-item">DOWNLOAD</a>
+            </div>
+        </div>
+
+        <!-- menu visible desktop -->
+        <nav class="navbar d-none d-lg-flex flex-column justify-content-evenly align-items-center ms-2">
+            <a href="./equipe.html" class="dropdown-item">L'EQUIPE</a>
+            <a href=" https://allanbd.itch.io/parazyte " class="dropdown-item">DOWNLOAD</a>
+        </nav>
+
+        <!-- mobile -->
+        <div class="logo-mobile d-block d-lg-none">
+            <a href="index.html" aria-label="Retour à l'accueil">
+                <img src="icons/logo_parazite.svg" alt="Logo Parazyte" class="logo-dépasse">
+            </a>
+        </div>
+
+        <!-- Desktop -->
+        <div class="logo-desktop d-none d-lg-block">
+            <a href="index.html" aria-label="Retour à l'accueil">
+                <img src="icons/logo_parazite.svg" alt="Logo Parazyte" class="logo-dépasse">
+            </a>
+        </div>
+    </header>
+
+    <div class="d-flex justify-content-start ms-2 my-2">
+        <a href="equipe.html" class="btn btn-outline-secondary d-inline-flex align-items-center">
+            <i class="bi bi-arrow-90deg-left me-2"></i>
+            Retour à l'équipe
+        </a>
+    </div>
+
+    <!-- ############################## MAIN ################################ -->
+
+    <main class="flex-grow-1 background-color2">
+
+        <div class="background-color2">
+
+            <div class="h1 text-center text-white p-2">Thomas Sarrazin</div>
+
+            <div class="background-color2 container-fluid">
+
+                <div class="row justify-content-center align-items-center p-2">
+                    <div class="col-12 col-lg-6">
+                        <div class="position-relative mx-auto">
+                            <img id="grosse-image" src="images_et_modeles/Thomas/Batiment1_2_Neutre.webp"
+                                class="img-fluid w-100 rounded" alt="visualiser">
+                            <button type="button" class="fullscreen-btn position-absolute bottom-0 end-0 m-2"
+                                aria-label="Voir en plein écran">
+                                <i class="bi bi-arrows-fullscreen"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel thumbnails -->
+                <div class="row justify-content-center">
+                    <div class="col-12 d-flex justify-content-center align-items-center gap-2 m-2">
+                        <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="next"
+                            aria-label="Image suivante ">
+                            <i class="bi bi-chevron-double-left text-white"></i>
+                        </button>
+
+                        <div id="thumbCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+
+                                <!-- Slide 1 -->
+                                <div class="carousel-item active">
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <img id="th-img1" src="images_et_modeles/Thomas/Batiment1_1_Neutre.webp"
+                                            class="img-thumbnail" alt="thumb 1">
+                                        <img id="th-img2" src="images_et_modeles/Thomas/Batiment1_2_Neutre.webp"
+                                            class="img-thumbnail" alt="thumb 2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="prev"
+                            aria-label="Image précédente">
+                            <i class="bi bi-chevron-double-right text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="background-color3 container-fluid">
+
+                <div class="d-flex justify-content-center">
+                    <model-viewer id="vue3D" class="modele-3d" disable-tap ar ar-modes="webxr scene-viewer quick-look"
+                        shadow-intensity="1" camera-controls touch-action="pan-y" auto-rotate>
+                    </model-viewer>
+                </div>
+
+                <div class="d-flex justify-content-center my-2">
+                    <button id="fullscreen-btn" type="button" class="btn btn-outline-light d-none d-lg-block"
+                        aria-label="Plein écran">
+                        <i class="bi bi-arrows-fullscreen"></i>
+                    </button>
+                </div>
+
+                <div class="d-flex justify-content-center align-items-center gap-5">
+                    <button type="button" id="prevModel" class="chevronav" aria-label="modèle précédent">
+                        <i class="bi bi-chevron-double-left text-white"></i>
+                    </button>
+                    <p class="m-0 text-white">16 modèles</p>
+                    <button type="button" id="nextModel" class="chevronav" aria-label="modèle suivant">
+                        <i class="bi bi-chevron-double-right text-white"></i>
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </main>
+
+    <div class="d-flex justify-content-start ms-2 my-2">
+        <a href="equipe.html" class="btn btn-outline-secondary d-inline-flex align-items-center">
+            <i class="bi bi-arrow-90deg-left me-2"></i>
+            Retour à l'équipe
+        </a>
+    </div>
+
+
+    <!-- ############################# footer ################################## -->
+
+    <footer class="text-white background-color d-flex justify-content-between align-items-center px-1 py-3">
+        <div class="d-flex flex-column align-items-center footer-item">
+            <i class="bi bi-chat-square-text"></i>
+            <span><a href="/mentions-legales.html" class="text-white">Mentions légales</a></span>
+        </div>
+        <!-- ################## off canvas d'accessibilité ############################## -->
+        <button class="btn p-1 bg-black d-flex flex-column align-items-center footer-item" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#accessibilityMenu" aria-label="Accessibilité">
+            <i class="bi bi-person-wheelchair text-white"></i>
+            <span class="text-white text-center text-decoration-underline ">Options d’accessibilité</span>
+        </button>
+
+        <div class="offcanvas offcanvas-bottom text-white custom-accessibility" tabindex="-1" id="accessibilityMenu"
+            aria-labelledby="accessibilityMenuLabel">
+            <div class="offcanvas-header background-color">
+                <h5 class="offcanvas-title" id="accessibilityMenuLabel">Options d’accessibilité</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+            </div>
+
+            <div class="offcanvas-body background-color2 d-flex flex-column gap-3">
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="contrastToggle">
+                    <label class="form-check-label" for="contrastToggle">Contraste élevé</label>
+                </div>
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="fontSizeToggle">
+                    <label class="form-check-label" for="fontSizeToggle">Texte plus grand</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="d-flex flex-column align-items-center footer-item">
+            <i class="bi bi-c-circle"></i>
+            <span>J.F 2025</span>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+
+</body>
+
+</html>

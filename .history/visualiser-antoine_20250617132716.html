@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antoine Drai</title>
+    <meta name="description" content="Site officiel du jeu Parazyte. Un shooter immersif où tout est destructible.">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+    <link rel="icon" href="./icons/logo_parazite.svg">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+</head>
+
+
+<body class="p-0">
+    <!-- ####### HEADER ######### -->
+    <header id="le-header" class="sticky-top background-color d-flex align-items-center mb-5">
+
+        <div class="d-block d-lg-none">
+            <button class="btn text-white burger-btn d-flex align-items-center justify-content-center p-0;"
+                type="button" data-bs-toggle="offcanvas" data-bs-target="#menuBurger" aria-controls="menuBurger"
+                aria-label="Menu">
+                <img src="icons/burger.svg" alt="Menu" class="burger-icon">
+            </button>
+        </div>
+
+        <!-- menu offcanvas -->
+        <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="menuBurger"
+            aria-labelledby="menuBurgerLabel">
+            <div class="offcanvas-header">
+                <a href="index.html" aria-label="Retour à l'accueil">
+                    <img id="off-logo" src="icons/logo_parazite.svg" alt="Logo Parazyte">
+                </a>
+                <h5 id="menuBurgerLabel" class="offcanvas-title d-none">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+            </div>
+            <div class="offcanvas-body d-flex flex-column justify-content-evenly align-items-center ms-2">
+                <a href="./equipe.html" class="dropdown-item">L'EQUIPE</a>
+                <a href=" https://allanbd.itch.io/parazyte " class="dropdown-item">DOWNLOAD</a>
+            </div>
+        </div>
+
+        <!-- menu visible desktop -->
+        <nav class="navbar d-none d-lg-flex flex-column justify-content-evenly align-items-center ms-2">
+            <a href="./equipe.html" class="dropdown-item">L'EQUIPE</a>
+            <a href=" https://allanbd.itch.io/parazyte " class="dropdown-item">DOWNLOAD</a>
+        </nav>
+
+        <!-- mobile -->
+        <div class="logo-mobile d-block d-lg-none">
+            <a href="index.html" aria-label="Retour à l'accueil">
+                <img src="icons/logo_parazite.svg" alt="Logo Parazyte" class="logo-dépasse">
+            </a>
+        </div>
+
+        <!-- Desktop -->
+        <div class="logo-desktop d-none d-lg-block">
+            <a href="index.html" aria-label="Retour à l'accueil">
+                <img src="icons/logo_parazite.svg" alt="Logo Parazyte" class="logo-dépasse">
+            </a>
+        </div>
+
+        <!-- ############################################################## -->
+
+    </header>
+
+    <div class="d-flex justify-content-start ms-2 my-2">
+        <a href="equipe.html" class="btn btn-outline-secondary d-inline-flex align-items-center">
+            <i class="bi bi-arrow-90deg-left me-2"></i>
+            Retour à l'équipe
+        </a>
+    </div>
+
+    <!-- ############################## MAIN ################################ -->
+    <main>
+
+        <!-- ############################## GALERIE ############################## -->
+        <div class="background-color2 container-fluid">
+
+            <div class="h1 text-center text-white p-2 ">Antoine Drai</div>
+
+            <div class="h2 text-white p-2">La musique :</div>
+            <div class="container p-5">
+                <div class="h4 text-white">Destroy the paraZyte !</div>
+                <audio controls class="w-100">
+                    <source src="antoine_zik/Destroy the parazyte !.wav" type="audio/mpeg">
+                    Votre navigateur ne supporte pas la lecture audio.
+                </audio>
+                <p class="text-white mt-2">Morceau principal du jeu.</p>
+            </div>
+        </div>
+        <div class="background-color3 container-fluid">
+            <div class="h2 text-white p-2 ">Les effets sonores :</div>
+
+            <div class="row justify-content-center mt-2">
+                <div class="row justify-content-center mt-2">
+                    <div
+                        class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center p-2 flex-column">
+                        <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
+                        <small class="text-white mt-2 text-center">
+                            <a href="http://www.freepik.com" class="text-white text-decoration-underline"
+                                target="_blank" rel="noopener noreferrer">
+                                Designed by starline / Freepik
+                            </a>
+                        </small>
+                    </div>
+                    <div
+                        class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start align-items-center p-2 flex-column">
+                        <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
+                        <small class="text-white mt-2 text-center">
+                            <a href="http://www.freepik.com" class="text-white text-decoration-underline"
+                                target="_blank" rel="noopener noreferrer">
+                                Designed by starline / Freepik
+                            </a>
+                        </small>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mt-2">
+                    <div
+                        class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center p-2 flex-column">
+                        <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
+                        <small class="text-white mt-2 text-center">
+                            <a href="http://www.freepik.com" class="text-white text-decoration-underline"
+                                target="_blank" rel="noopener noreferrer">
+                                Designed by starline / Freepik
+                            </a>
+                        </small>
+                    </div>
+                    <div
+                        class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start align-items-center p-2 flex-column">
+                        <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
+                        <small class="text-white mt-2 text-center">
+                            <a href="http://www.freepik.com" class="text-white text-decoration-underline"
+                                target="_blank" rel="noopener noreferrer">
+                                Designed by starline / Freepik
+                            </a>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- ############################################################## -->
+
+    <div class="d-flex justify-content-start ms-2 my-2">
+        <a href="equipe.html" class="btn btn-outline-secondary d-inline-flex align-items-center">
+            <i class="bi bi-arrow-90deg-left me-2"></i>
+            Retour à l'équipe
+        </a>
+    </div>
+
+    <!-- ############################################################## -->
+    <footer class="text-white background-color d-flex justify-content-between align-items-center px-1 py-3">
+        <div class="d-flex flex-column align-items-center footer-item">
+            <i class="bi bi-chat-square-text"></i>
+            <span><a href="/mentions-legales.html" class="text-white">Mentions légales</a></span>
+        </div>
+        <!-- ################## off canvas d'accessibilité ############################## -->
+        <button class="btn p-1 bg-black d-flex flex-column align-items-center footer-item" type="button"
+            data-bs-toggle="offcanvas" data-bs-target="#accessibilityMenu" aria-label="Accessibilité">
+            <i class="bi bi-person-wheelchair text-white"></i>
+            <span class="text-white text-center text-decoration-underline ">Options d’accessibilité</span>
+        </button>
+
+        <div class="offcanvas offcanvas-bottom text-white custom-accessibility" tabindex="-1" id="accessibilityMenu"
+            aria-labelledby="accessibilityMenuLabel">
+            <div class="offcanvas-header background-color">
+                <h5 class="offcanvas-title" id="accessibilityMenuLabel">Options d’accessibilité</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer"></button>
+            </div>
+
+            <div class="offcanvas-body background-color2 d-flex flex-column gap-3">
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="contrastToggle">
+                    <label class="form-check-label" for="contrastToggle">Contraste élevé</label>
+                </div>
+
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="fontSizeToggle">
+                    <label class="form-check-label" for="fontSizeToggle">Texte plus grand</label>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="d-flex flex-column align-items-center footer-item">
+            <i class="bi bi-c-circle"></i>
+            <span>J.F 2025</span>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script src="js/script1.js"></script>
+
+
+</body>
+
+</html>

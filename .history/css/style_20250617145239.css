@@ -1,0 +1,313 @@
+body {
+  font-family: "Roboto", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* #################### HEADER #############################*/
+#le-header {
+  height: 75px;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.5);
+  transition: top 0.3s ease;
+}
+
+.header-hidden {
+  top: -120px;
+}
+
+nav {
+  color: #ffffff;
+}
+
+/* menu "beurgeur" */
+.burger-btn {
+  width: 40px;
+  height: 60px;
+}
+
+#menuBurger {
+  background-color: #242a3a;
+  height: 200px;
+  width: 250px;
+  color: white;
+  border-radius: 8px;
+}
+
+.offcanvas-header {
+  background-color: #242a3a;
+  height: 75px;
+}
+
+#off-logo {
+  max-width: 170px;
+}
+
+/* positionnment de mon logo par rapport au haut */
+.logo-mobile,
+.logo-desktop {
+  position: absolute;
+  bottom: -34px;
+}
+
+/* commun à l'image */
+.logo-dépasse {
+  height: 93px;
+}
+
+.logo-mobile {
+  left: 57%;
+  transform: translateX(-50%);
+}
+
+/* desktop à gauche */
+.logo-desktop {
+  left: 51%;
+  transform: translateX(-50%);
+}
+
+/* ############### fin header ####################### */
+
+.background-color {
+  background-color: #242a3a;
+}
+
+.background-color2 {
+  background-color: #040405;
+}
+
+.background-color3 {
+  background-image: linear-gradient(
+    to bottom,
+    #6f2ad9 0%,
+    #ffffff 50%,
+    #25c1ec 100%
+  );
+  color: white;
+}
+
+.pitch {
+  color: #ffffff;
+}
+
+.img-thumbnail {
+  height: 80px;
+  width: 80px;
+}
+
+.chevronav {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 2rem;
+}
+
+#thumbCarousel {
+  width: 300px;
+}
+
+.image-wrapper {
+  max-width: 630px;
+  max-height: 360px;
+}
+
+#grosse-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.fullscreen-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.fullscreen-btn i {
+  font-size: 1.2rem;
+}
+
+/* pour la taille des media "gifs" sur page index */
+.mini-video {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ####################### footer ####################################### */
+
+footer {
+  background-color: #242a3a;
+  color: white;
+}
+
+.footer-item {
+  min-width: 100px;
+}
+
+.footer-item i {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.footer-item span {
+  font-size: 0.875rem;
+  line-height: 1rem;
+  text-align: center;
+}
+
+/* ############## ACCESSIBILITÉ ###################### */
+
+#accessibilityMenu {
+  background-color: #242a3a;
+  height: 220px;
+  width: 250px;
+  color: white;
+  border-radius: 8px;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+/* pour le body en entier */
+.high-contrast {
+  background-color: #000000 !important;
+  color: #ffe600 !important;
+}
+
+/* pour TOUT les enfants de body */
+.high-contrast * {
+  color: #ffe600 !important;
+  border-color: #ffe600 !important;
+}
+
+/* bouton */
+.high-contrast .btn {
+  background-color: #000000 !important;
+  color: #ffe600 !important;
+  border: 1px solid #ffe600 !important;
+}
+
+/* pour mes boutons dans le off footer */
+.high-contrast input,
+.high-contrast textarea,
+.high-contrast select {
+  background-color: #111 !important;
+  color: #ffe600 !important;
+  border: 1px solid #ffe600 !important;
+}
+
+.font-large {
+  font-size: 1.2rem;
+}
+
+/* pour mes pills des card */
+.high-contrast .rounded-pill,
+.high-contrast .pill-noire {
+  background-color: #000000 !important;
+  color: #ffe600 !important;
+  border: 1px solid #ffe600 !important;
+}
+
+/* pour mes logo svg  */
+.high-contrast .contraste-jaune {
+  color: #ffe600 !important; /* jaune lisible */
+  fill: currentColor !important;
+}
+
+/* pour que le logo soit blanc par default en current  */
+.contraste-jaune {
+  color: white;
+}
+
+/* ################## CARD ############################ */
+
+.card {
+  height: 600px;
+  width: 23rem;
+  border-color: white;
+}
+
+.card-img-top {
+  width: 50%;
+}
+
+.background-color4 {
+  background-color: #223681;
+}
+
+.fs-custom {
+  font-size: 4rem;
+}
+
+.notionlogo {
+  width: 32px;
+  height: 32px;
+}
+
+.notionlogopc {
+  width: 45px;
+  height: 45px;
+}
+
+.artstationlogopc {
+  width: 35px;
+  height: 35px;
+}
+
+.artstationlogo {
+  width: 35px;
+  height: 35px;
+}
+
+.bandcamppc {
+  width: 60px;
+  height: 60px;
+}
+
+.wixlogo {
+  width: 30px;
+  height: 30px;
+}
+
+/* ####################### divers media card et visual. ################################ */
+
+#vue3D {
+  width: 800px;
+  height: 600px;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bat-coeur {
+  animation: pulse 1.2s infinite ease-in-out;
+}
+
+/* #################### bouton retour ############################ */
+
+.retour-btn {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.retour-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
+}
+/* ##################################################################### */
