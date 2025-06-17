@@ -41,7 +41,6 @@ nav {
   max-width: 170px;
 }
 
-/* positionnment de mon logo par rapport au haut */
 .logo-mobile,
 .logo-desktop {
   position: absolute;
@@ -106,7 +105,6 @@ nav {
 
 .image-wrapper {
   max-width: 630px;
-  max-height: 360px;
 }
 
 #grosse-image {

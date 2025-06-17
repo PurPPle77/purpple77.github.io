@@ -45,7 +45,6 @@ nav {
 .logo-mobile,
 .logo-desktop {
   position: absolute;
-  bottom: -34px;
 }
 
 /* commun à l'image */
@@ -106,7 +105,6 @@ nav {
 
 .image-wrapper {
   max-width: 630px;
-  max-height: 360px;
 }
 
 #grosse-image {
