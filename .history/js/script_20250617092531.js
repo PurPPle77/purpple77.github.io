@@ -29,136 +29,99 @@ window.addEventListener("DOMContentLoaded", function () {
 
     // ####################### MODE PLEIN ÉCRAN (images) ########################
 
-    // On récupère l’image principale affichée en grand
+    // Sélection des éléments utiles
     const image = document.getElementById("grosse-image");
-
-    // On récupère toutes les miniatures (vignettes en bas) dans un tableau
     const thumbnails = Array.from(document.querySelectorAll(".img-thumbnail"));
 
-    // Variable pour savoir quelle image est actuellement affichée
-    let currentIndex = 0;
+    let currentIndex = 0; // Index de l'image actuellement affichée
 
-    // Vérifie que l’image principale existe (utile si le script est utilisé sur plusieurs pages)
+    // Vérifie que l'image existe (utile si la page ne l’a pas)
     if (image) {
+        // Trouve l'index de l'image affichée au départ
+        currentIndex = thumbnails.findIndex(img => img.src === image.src);
 
-        // Trouve l’index de l’image affichée au départ (par rapport à la liste des miniatures)
-        currentIndex = thumbnails.findIndex(function (img) {
-            return img.src === image.src;
-        });
-
-        // === Entrée en plein écran quand on clique sur l’image ===
+        // === Entrée en plein écran sur clic ou toucher ===
         image.addEventListener("click", function () {
-            // Si aucun élément n’est déjà en plein écran
             if (!document.fullscreenElement) {
-                // Demande de passer l’image en plein écran (norme standard)
                 if (image.requestFullscreen) {
                     image.requestFullscreen();
-                }
-                // Compatibilité avec les navigateurs WebKit (Safari)
-                else if (image.webkitRequestFullscreen) {
+                } else if (image.webkitRequestFullscreen) {
                     image.webkitRequestFullscreen();
-                }
-                // Compatibilité avec les navigateurs Microsoft (IE, Edge legacy)
-                else if (image.msRequestFullscreen) {
+                } else if (image.msRequestFullscreen) {
                     image.msRequestFullscreen();
                 }
             }
         });
 
-        // === Sortie du plein écran si on re-clique sur l’image ===
+        // === Sortie du plein écran quand on clique sur l'image ===
         image.addEventListener("click", function () {
-            // Vérifie si l’image est actuellement en plein écran
             const isFullscreen =
                 document.fullscreenElement ||
                 document.webkitFullscreenElement ||
                 document.msFullscreenElement;
 
-            // Si c’est bien l’image affichée en plein écran
             if (isFullscreen === image) {
-                // Quitte le plein écran (standard)
                 if (document.exitFullscreen) {
                     document.exitFullscreen();
-                }
-                // Version WebKit
-                else if (document.webkitExitFullscreen) {
+                } else if (document.webkitExitFullscreen) {
                     document.webkitExitFullscreen();
-                }
-                // Version Microsoft
-                else if (document.msExitFullscreen) {
+                } else if (document.msExitFullscreen) {
                     document.msExitFullscreen();
                 }
             }
         });
 
-        // === Navigation clavier quand on est en plein écran ===
-
+        // === Navigation clavier : flèches gauche/droite pendant le plein écran ===
         document.addEventListener("keydown", function (e) {
-            // Si on n’est pas en plein écran → on ne fait rien
             if (!document.fullscreenElement) return;
 
-            // Flèche droite → image suivante
             if (e.key === "ArrowRight") {
                 currentIndex = (currentIndex + 1) % thumbnails.length;
                 image.src = thumbnails[currentIndex].src;
-            }
-
-            // Flèche gauche → image précédente
-            else if (e.key === "ArrowLeft") {
+            } else if (e.key === "ArrowLeft") {
                 currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
                 image.src = thumbnails[currentIndex].src;
             }
         });
 
-        // === Quand on clique sur une miniature, on met à jour l’image principale ===
-        thumbnails.forEach(function (thumb, index) {
-            thumb.addEventListener("click", function () {
-                image.src = thumb.src;        // on change la grande image
-                currentIndex = index;         // on mémorise la position pour flèches/clavier
+        // === Clic sur une miniature : met à jour l'image principale ===
+        thumbnails.forEach((thumb, index) => {
+            thumb.addEventListener("click", () => {
+                image.src = thumb.src;
+                currentIndex = index;
             });
         });
 
-        // === GESTION DU SWIPE TACTILE pendant le plein écran ===
+        // === GESTION DU SWIPE TACTILE ===
 
-        // Position de départ du doigt (touchstart)
         let touchStartX = 0;
-
-        // Position de fin du doigt (touchend)
         let touchEndX = 0;
 
-        // Quand on touche l’écran au début du geste
+        // Enregistre la position de départ du toucher
         image.addEventListener("touchstart", function (e) {
-            // On vérifie qu’on est bien en plein écran sur l’image
             if (document.fullscreenElement === image) {
-                // On récupère la position horizontale du doigt
                 touchStartX = e.changedTouches[0].screenX;
             }
         }, false);
 
-        // Quand on lève le doigt (fin du geste)
+        // Enregistre la position de fin du toucher et traite le geste
         image.addEventListener("touchend", function (e) {
             if (document.fullscreenElement === image) {
-                // On récupère la nouvelle position du doigt
                 touchEndX = e.changedTouches[0].screenX;
-
-                // On appelle la fonction qui va analyser le swipe
-                handleSwipeGesture();
+                handleSwipeGesture(); // Appelle la fonction juste en dessous
             }
         }, false);
 
-        // Fonction qui détecte si le swipe est vers la gauche ou la droite
+        // Fonction pour détecter si on a fait un "swipe gauche" ou "swipe droite"
         function handleSwipeGesture() {
-            const swipeMin = 50; // distance minimale pour valider un vrai geste de swipe
+            const swipeMin = 50; // distance minimale en pixels pour valider un swipe
 
-            // Si le doigt est allé vers la gauche (on a glissé vers la gauche)
             if (touchEndX < touchStartX - swipeMin) {
-                // Image suivante
+                // Swipe vers la gauche → image suivante
                 currentIndex = (currentIndex + 1) % thumbnails.length;
                 image.src = thumbnails[currentIndex].src;
-            }
-
-            // Si le doigt est allé vers la droite (on a glissé vers la droite)
-            else if (touchEndX > touchStartX + swipeMin) {
-                // Image précédente
+            } else if (touchEndX > touchStartX + swipeMin) {
+                // Swipe vers la droite → image précédente
                 currentIndex = (currentIndex - 1 + thumbnails.length) % thumbnails.length;
                 image.src = thumbnails[currentIndex].src;
             }
@@ -218,26 +181,29 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
     // #######################  MODEL VIEWER ######################
-    // #######################  MODEL VIEWER ######################
 
     // === Étape 1 : récupérer le nom du fichier HTML affiché ===
 
-    // On récupère le chemin complet du fichier en cours (ex : /visualiser-gaetan.html)
+    // On récupère le chemin complet de l'URL (par exemple "/visualiser-gaétan.html")
     let cheminComplet = window.location.pathname;
 
-    // On coupe le chemin en morceaux avec "/" pour isoler le nom du fichier
+    // On coupe ce chemin en morceaux à chaque "/" (ex: ["", "visualiser-gaétan.html"])
     let morceauxChemin = cheminComplet.split("/");
 
-    // Le dernier morceau du tableau est le nom du fichier HTML (page actuelle)
+    // On prend le dernier morceau du tableau, c’est le nom du fichier
     let nomDeLaPage = morceauxChemin[morceauxChemin.length - 1];
 
-    // On affiche dans la console pour vérifier (utile en debug)
+    // On peut afficher pour vérifier
     console.log("Page actuelle :", nomDeLaPage);
 
     // === Étape 2 : associer chaque page à ses modèles 3D ===
 
-    // On crée un objet (un "dictionnaire") qui associe chaque fichier HTML à ses modèles
     let modelMap = {
+        "visualiser-allan.html": [
+            "images_et_modeles/Allan/Batiment1.glb",
+            "images_et_modeles/Allan/Batiment2.glb"
+        ],
+
         "visualiser-gaetan.html": [
             "images_et_modeles/Gaétan/Vaisseau.glb",
             "images_et_modeles/Gaétan/Vaisseau_parasite.glb"
@@ -246,63 +212,84 @@ window.addEventListener("DOMContentLoaded", function () {
         "visualiser-thomas.html": [
             "images_et_modeles/Thomas/Batiment1.glb",
             "images_et_modeles/Thomas/Batiment2.glb",
-            // … (liste coupée pour l'exemple)
+            "images_et_modeles/Thomas/Batiment3.glb",
+            "images_et_modeles/Thomas/Batiment4.glb",
+            "images_et_modeles/Thomas/Batiment5.glb",
+            "images_et_modeles/Thomas/Batiment6.glb",
+            "images_et_modeles/Thomas/Batiment7.glb",
+            "images_et_modeles/Thomas/Batiment7_parasite.glb",
+            "images_et_modeles/Thomas/Batiment8.glb",
+            "images_et_modeles/Thomas/Batiment9.glb",
+            "images_et_modeles/Thomas/Batiment10.glb",
+            "images_et_modeles/Thomas/Batiment11.glb",
+            "images_et_modeles/Thomas/Batiment12.glb",
+            "images_et_modeles/Thomas/Batiment13.glb",
+            "images_et_modeles/Thomas/Batiment14.glb",
             "images_et_modeles/Thomas/Batiment15.glb"
+        ],
+
+        "visualiser-justine.html": [
+            "images_et_modeles/Justine/Flyer1.glb"
+        ],
+        "visualiser-maëlle.html": [
+            "images_et_modeles/Maëlle/Illustration1.glb"
+        ],
+        "visualiser-antoine.html": [
+            "images_et_modeles/Antoine/ObjetSonore.glb"
         ]
     };
 
-    // === Étape 3 : récupérer la liste de modèles correspondant à la page ===
-    let models = modelMap[nomDeLaPage]; // récupère la liste à partir du nom de page
+    // === Étape 3 : récupérer les modèles liés à la page actuelle ===
 
-    // On sélectionne la balise <model-viewer> avec l’id "vue3D"
+    // On utilise le nom de la page pour aller chercher la bonne liste
+    let models = modelMap[nomDeLaPage];
+
+    // On récupère le model-viewer
     let viewer = document.querySelector("#vue3D");
 
-    // On initialise à 0 pour afficher le premier modèle de la liste
+    // On démarre toujours avec le premier modèle (index 0)
     let modelIndex = 0;
 
-    // === Étape 4 : si tout est bien présent, on affiche et active les boutons ===
+    // === Étape 4 : si tout est bien en place, on active les boutons et l'affichage ===
     if (viewer && models && models.length > 0) {
 
-        // Fonction pour changer de modèle affiché
+        // Fonction pour afficher le bon modèle dans le viewer
         function updateModel(index) {
-            viewer.setAttribute("src", models[index]); // met à jour le modèle 3D affiché
+
+            viewer.setAttribute("src", models[index]);
         }
 
-        // Bouton "Suivant"
+        // Quand on clique sur le bouton "suivant"
         let boutonSuivant = document.getElementById("nextModel");
         if (boutonSuivant) {
             boutonSuivant.addEventListener("click", function () {
-                modelIndex = (modelIndex + 1) % models.length; // passe au suivant (boucle)
+                modelIndex = (modelIndex + 1) % models.length;
                 updateModel(modelIndex);
             });
         }
 
-        // Bouton "Précédent"
+        // Quand on clique sur le bouton "précédent"
         let boutonPrecedent = document.getElementById("prevModel");
         if (boutonPrecedent) {
             boutonPrecedent.addEventListener("click", function () {
-                modelIndex = (modelIndex - 1 + models.length) % models.length; // va au précédent (boucle)
+                modelIndex = (modelIndex - 1 + models.length) % models.length;
                 updateModel(modelIndex);
             });
         }
 
-        // Affiche le premier modèle dès le chargement
+        // On affiche le premier modèle tout de suite
         updateModel(modelIndex);
     }
 
-    // === Plein écran sur le viewer ===
     const fullscreenBtn = document.getElementById("fullscreen-btn");
 
-    // Si on a bien le bouton et le viewer
     if (viewer && fullscreenBtn) {
         fullscreenBtn.addEventListener("click", () => {
-            // Si on n'est pas déjà en plein écran → on demande le fullscreen
             if (!document.fullscreenElement) {
-                viewer.requestFullscreen?.();         // norme standard
-                viewer.webkitRequestFullscreen?.();   // Safari
-                viewer.msRequestFullscreen?.();       // Microsoft
+                viewer.requestFullscreen?.();
+                viewer.webkitRequestFullscreen?.();
+                viewer.msRequestFullscreen?.();
             } else {
-                // Sinon on quitte le plein écran
                 document.exitFullscreen?.();
                 document.webkitExitFullscreen?.();
                 document.msExitFullscreen?.();
@@ -310,44 +297,41 @@ window.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // === Gestes tactiles pour éviter conflits entre rotation et scroll ===
     let startX = 0;
     let startY = 0;
 
     if (viewer) {
-        // Quand on commence à toucher l’écran
         viewer.addEventListener("touchstart", function (e) {
             if (e.touches.length > 1) {
-                // Si deux doigts → probablement zoom, on bloque le scroll
+                // Si on pince à 2 doigts → probablement zoom
                 document.body.style.overflow = "hidden";
             } else {
-                // Sinon on enregistre la position de départ du doigt
+                // Enregistre la position de départ
                 startX = e.touches[0].clientX;
                 startY = e.touches[0].clientY;
             }
-        }, { passive: false }); // passive:false pour pouvoir utiliser preventDefault
+        }, { passive: false });
 
-        // Quand le doigt bouge
         viewer.addEventListener("touchmove", function (e) {
             if (e.touches.length > 1) {
-                e.preventDefault(); // empêche le zoom de scroller la page
+                // Toujours en mode zoom
+                e.preventDefault();
                 return;
             }
 
-            // Calcul du mouvement
             const dx = e.touches[0].clientX - startX;
             const dy = e.touches[0].clientY - startY;
 
-            // Si le mouvement est surtout horizontal
             if (Math.abs(dx) > Math.abs(dy)) {
-                e.preventDefault(); // empêche le scroll vertical de la page
+                // Si le geste est plutôt horizontal → rotation du modèle
+                e.preventDefault(); // bloque le scroll vertical
                 document.body.style.overflow = "hidden";
             } else {
-                document.body.style.overflow = ""; // on réactive le scroll normal
+                // Geste vertical → on laisse scroller
+                document.body.style.overflow = "";
             }
         }, { passive: false });
 
-        // Fin du geste
         viewer.addEventListener("touchend", function () {
             document.body.style.overflow = "";
         });
@@ -355,16 +339,13 @@ window.addEventListener("DOMContentLoaded", function () {
             document.body.style.overflow = "";
         });
     }
+    const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
+    const isMobile = /android|iphone|ipad|ipod/i.test(navigator.userAgent);
 
-    // === Alerte spéciale pour Firefox Mobile ===
-    const isFirefox = navigator.userAgent.toLowerCase().includes('firefox'); // détecte Firefox
-    const isMobile = /android|iphone|ipad|ipod/i.test(navigator.userAgent);  // détecte mobile
-
-    // Si on est sur Firefox mobile → on affiche un message (toast Bootstrap)
     if (isFirefox && isMobile) {
-        const toastEl = document.getElementById("toastFirefox"); // l’élément du message
-        const toast = new bootstrap.Toast(toastEl);              // création du toast Bootstrap
-        toast.show();                                             // affichage automatique
+        const toastEl = document.getElementById("toastFirefox");
+        const toast = new bootstrap.Toast(toastEl);
+        toast.show();
     }
 
 })

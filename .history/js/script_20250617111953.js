@@ -218,26 +218,25 @@ window.addEventListener("DOMContentLoaded", function () {
 
 
     // #######################  MODEL VIEWER ######################
-    // #######################  MODEL VIEWER ######################
 
     // === Étape 1 : récupérer le nom du fichier HTML affiché ===
 
-    // On récupère le chemin complet du fichier en cours (ex : /visualiser-gaetan.html)
+    // On récupère le chemin complet de l'URL (par exemple "/visualiser-gaétan.html")
     let cheminComplet = window.location.pathname;
 
-    // On coupe le chemin en morceaux avec "/" pour isoler le nom du fichier
+    // On coupe ce chemin en morceaux à chaque "/" (ex: ["", "visualiser-gaétan.html"])
     let morceauxChemin = cheminComplet.split("/");
 
-    // Le dernier morceau du tableau est le nom du fichier HTML (page actuelle)
+    // On prend le dernier morceau du tableau, c’est le nom du fichier
     let nomDeLaPage = morceauxChemin[morceauxChemin.length - 1];
 
-    // On affiche dans la console pour vérifier (utile en debug)
+    // On peut afficher pour vérifier
     console.log("Page actuelle :", nomDeLaPage);
 
     // === Étape 2 : associer chaque page à ses modèles 3D ===
 
-    // On crée un objet (un "dictionnaire") qui associe chaque fichier HTML à ses modèles
     let modelMap = {
+
         "visualiser-gaetan.html": [
             "images_et_modeles/Gaétan/Vaisseau.glb",
             "images_et_modeles/Gaétan/Vaisseau_parasite.glb"
@@ -246,63 +245,74 @@ window.addEventListener("DOMContentLoaded", function () {
         "visualiser-thomas.html": [
             "images_et_modeles/Thomas/Batiment1.glb",
             "images_et_modeles/Thomas/Batiment2.glb",
-            // … (liste coupée pour l'exemple)
+            "images_et_modeles/Thomas/Batiment3.glb",
+            "images_et_modeles/Thomas/Batiment4.glb",
+            "images_et_modeles/Thomas/Batiment5.glb",
+            "images_et_modeles/Thomas/Batiment6.glb",
+            "images_et_modeles/Thomas/Batiment7.glb",
+            "images_et_modeles/Thomas/Batiment7_parasite.glb",
+            "images_et_modeles/Thomas/Batiment8.glb",
+            "images_et_modeles/Thomas/Batiment9.glb",
+            "images_et_modeles/Thomas/Batiment10.glb",
+            "images_et_modeles/Thomas/Batiment11.glb",
+            "images_et_modeles/Thomas/Batiment12.glb",
+            "images_et_modeles/Thomas/Batiment13.glb",
+            "images_et_modeles/Thomas/Batiment14.glb",
             "images_et_modeles/Thomas/Batiment15.glb"
-        ]
+        ],
     };
 
-    // === Étape 3 : récupérer la liste de modèles correspondant à la page ===
-    let models = modelMap[nomDeLaPage]; // récupère la liste à partir du nom de page
+    // === Étape 3 : récupérer les modèles liés à la page actuelle ===
 
-    // On sélectionne la balise <model-viewer> avec l’id "vue3D"
+    // On utilise le nom de la page pour aller chercher la bonne liste
+    let models = modelMap[nomDeLaPage];
+
+    // On récupère le model-viewer
     let viewer = document.querySelector("#vue3D");
 
-    // On initialise à 0 pour afficher le premier modèle de la liste
+    // On démarre toujours avec le premier modèle (index 0)
     let modelIndex = 0;
 
-    // === Étape 4 : si tout est bien présent, on affiche et active les boutons ===
+    // === Étape 4 : si tout est bien en place, on active les boutons et l'affichage ===
     if (viewer && models && models.length > 0) {
 
-        // Fonction pour changer de modèle affiché
+        // Fonction pour afficher le bon modèle dans le viewer
         function updateModel(index) {
-            viewer.setAttribute("src", models[index]); // met à jour le modèle 3D affiché
+
+            viewer.setAttribute("src", models[index]);
         }
 
-        // Bouton "Suivant"
+        // Quand on clique sur le bouton "suivant"
         let boutonSuivant = document.getElementById("nextModel");
         if (boutonSuivant) {
             boutonSuivant.addEventListener("click", function () {
-                modelIndex = (modelIndex + 1) % models.length; // passe au suivant (boucle)
+                modelIndex = (modelIndex + 1) % models.length;
                 updateModel(modelIndex);
             });
         }
 
-        // Bouton "Précédent"
+        // Quand on clique sur le bouton "précédent"
         let boutonPrecedent = document.getElementById("prevModel");
         if (boutonPrecedent) {
             boutonPrecedent.addEventListener("click", function () {
-                modelIndex = (modelIndex - 1 + models.length) % models.length; // va au précédent (boucle)
+                modelIndex = (modelIndex - 1 + models.length) % models.length;
                 updateModel(modelIndex);
             });
         }
 
-        // Affiche le premier modèle dès le chargement
+        // On affiche le premier modèle tout de suite
         updateModel(modelIndex);
     }
 
-    // === Plein écran sur le viewer ===
     const fullscreenBtn = document.getElementById("fullscreen-btn");
 
-    // Si on a bien le bouton et le viewer
     if (viewer && fullscreenBtn) {
         fullscreenBtn.addEventListener("click", () => {
-            // Si on n'est pas déjà en plein écran → on demande le fullscreen
             if (!document.fullscreenElement) {
-                viewer.requestFullscreen?.();         // norme standard
-                viewer.webkitRequestFullscreen?.();   // Safari
-                viewer.msRequestFullscreen?.();       // Microsoft
+                viewer.requestFullscreen?.();
+                viewer.webkitRequestFullscreen?.();
+                viewer.msRequestFullscreen?.();
             } else {
-                // Sinon on quitte le plein écran
                 document.exitFullscreen?.();
                 document.webkitExitFullscreen?.();
                 document.msExitFullscreen?.();
@@ -310,44 +320,41 @@ window.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // === Gestes tactiles pour éviter conflits entre rotation et scroll ===
     let startX = 0;
     let startY = 0;
 
     if (viewer) {
-        // Quand on commence à toucher l’écran
         viewer.addEventListener("touchstart", function (e) {
             if (e.touches.length > 1) {
-                // Si deux doigts → probablement zoom, on bloque le scroll
+                // Si on pince à 2 doigts → probablement zoom
                 document.body.style.overflow = "hidden";
             } else {
-                // Sinon on enregistre la position de départ du doigt
+                // Enregistre la position de départ
                 startX = e.touches[0].clientX;
                 startY = e.touches[0].clientY;
             }
-        }, { passive: false }); // passive:false pour pouvoir utiliser preventDefault
+        }, { passive: false });
 
-        // Quand le doigt bouge
         viewer.addEventListener("touchmove", function (e) {
             if (e.touches.length > 1) {
-                e.preventDefault(); // empêche le zoom de scroller la page
+                // Toujours en mode zoom
+                e.preventDefault();
                 return;
             }
 
-            // Calcul du mouvement
             const dx = e.touches[0].clientX - startX;
             const dy = e.touches[0].clientY - startY;
 
-            // Si le mouvement est surtout horizontal
             if (Math.abs(dx) > Math.abs(dy)) {
-                e.preventDefault(); // empêche le scroll vertical de la page
+                // Si le geste est plutôt horizontal → rotation du modèle
+                e.preventDefault(); // bloque le scroll vertical
                 document.body.style.overflow = "hidden";
             } else {
-                document.body.style.overflow = ""; // on réactive le scroll normal
+                // Geste vertical → on laisse scroller
+                document.body.style.overflow = "";
             }
         }, { passive: false });
 
-        // Fin du geste
         viewer.addEventListener("touchend", function () {
             document.body.style.overflow = "";
         });
@@ -355,16 +362,13 @@ window.addEventListener("DOMContentLoaded", function () {
             document.body.style.overflow = "";
         });
     }
+    const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
+    const isMobile = /android|iphone|ipad|ipod/i.test(navigator.userAgent);
 
-    // === Alerte spéciale pour Firefox Mobile ===
-    const isFirefox = navigator.userAgent.toLowerCase().includes('firefox'); // détecte Firefox
-    const isMobile = /android|iphone|ipad|ipod/i.test(navigator.userAgent);  // détecte mobile
-
-    // Si on est sur Firefox mobile → on affiche un message (toast Bootstrap)
     if (isFirefox && isMobile) {
-        const toastEl = document.getElementById("toastFirefox"); // l’élément du message
-        const toast = new bootstrap.Toast(toastEl);              // création du toast Bootstrap
-        toast.show();                                             // affichage automatique
+        const toastEl = document.getElementById("toastFirefox");
+        const toast = new bootstrap.Toast(toastEl);
+        toast.show();
     }
 
 })
