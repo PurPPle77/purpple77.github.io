@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>thomas Sarrazin</title>
+    <title>gaetan lamoureux</title>
     <meta name="description" content="Site officiel du jeu Parazyte. Un shooter immersif où tout est destructible.">
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
@@ -16,7 +16,6 @@
 </head>
 
 <body class="p-0 min-vh-100"> <!--  pour forcer le remplissage du viewport à 100% -->
-
 
     <!-- ############################### TOAST MESSAGE POUR INDIQUER QUE L'AR NE MARCHE PAS SUR FIREFOX ################################# -->
     <div class="position-fixed bottom-0">
@@ -95,7 +94,64 @@
 
         <div class="background-color2">
 
-            <div class="h1 text-center text-white p-2">Thomas Sarrazin</div>
+            <div class="h1 text-center text-white p-2">Gaétan lamoureux</div>
+
+            <div class="background-color2 container-fluid">
+
+                <div class="row justify-content-center align-items-center p-2">
+                    <div class="col-12 col-lg-6">
+                        <div class="position-relative mx-auto">
+                            <img id="grosse-image" src="images_et_modeles/Gaétan/Concept_Parasite.webp"
+                                alt="visualiser">
+                            <button type="button" class="fullscreen-btn position-absolute bottom-0 end-0 m-2"
+                                aria-label="Voir en plein écran">
+                                <i class="bi bi-arrows-fullscreen"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel thumbnails -->
+                <div class="row justify-content-center">
+                    <div class="col-12 d-flex justify-content-center align-items-center gap-2 m-2">
+                        <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="next"
+                            aria-label="Image suivante ">
+                            <i class="bi bi-chevron-double-left text-white"></i>
+                        </button>
+
+                        <div id="thumbCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+
+                                <!-- Slide 1 -->
+                                <div class="carousel-item active">
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <img id="th-img1" src="images_et_modeles/Gaétan/Concept_Parasite.webp"
+                                            class="img-thumbnail" alt="thumb 1">
+                                        <img id="th-img2" src="images_et_modeles/Gaétan/Concept_Vaisseau.webp"
+                                            class="img-thumbnail" alt="thumb 2">
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="carousel-item">
+                                    <div class="d-flex justify-content-center gap-2">
+                                        <img id="th-img3" src="images_et_modeles/Gaétan/Rendu_Vaisseau.webp"
+                                            class="img-thumbnail" alt="thumb 1">
+                                        <img id="th-img4" src="images_et_modeles/Gaétan/Rendu_Vaisseau_parasite.webp"
+                                            class="img-thumbnail" alt="thumb 2">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="prev"
+                            aria-label="Image précédente">
+                            <i class="bi bi-chevron-double-right text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
 
             <div class="background-color3 container-fluid">
 
@@ -116,52 +172,10 @@
                     <button type="button" id="prevModel" class="chevronav" aria-label="modèle précédent">
                         <i class="bi bi-chevron-double-left text-white"></i>
                     </button>
-                    <p class="m-0 text-white">16 modèles</p>
+                    <p class="m-0 text-white">2 modèles</p>
                     <button type="button" id="nextModel" class="chevronav" aria-label="modèle suivant">
                         <i class="bi bi-chevron-double-right text-white"></i>
                     </button>
-                </div>
-                <div class="background-color2 container-fluid">
-
-                    <div class="row justify-content-center align-items-center p-2">
-                        <div class="col-12 col-lg-6">
-
-                            <img id="grosse-image" src="images_et_modeles/Thomas/Batiment1_2_Neutre.webp"
-                                class="img-fluid w-100 rounded" alt="visualiser">
-
-                        </div>
-                    </div>
-
-                    <!-- Carousel thumbnails -->
-                    <div class="row justify-content-center">
-                        <div class="col-12 d-flex justify-content-center align-items-center gap-2 m-2">
-                            <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="next"
-                                aria-label="Image suivante ">
-                                <i class="bi bi-chevron-double-left text-white"></i>
-                            </button>
-
-                            <div id="thumbCarousel" class="carousel slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-
-                                    <!-- Slide 1 -->
-                                    <div class="carousel-item active">
-                                        <div class="d-flex justify-content-center gap-2">
-                                            <img id="th-img1" src="images_et_modeles/Thomas/Batiment1_1_Neutre.webp"
-                                                class="img-thumbnail" alt="thumb 1">
-                                            <img id="th-img2" src="images_et_modeles/Thomas/Batiment1_2_Neutre.webp"
-                                                class="img-thumbnail" alt="thumb 2">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="prev"
-                                aria-label="Image précédente">
-                                <i class="bi bi-chevron-double-right text-white"></i>
-                            </button>
-                        </div>
-                    </div>
-
                 </div>
 
             </div>

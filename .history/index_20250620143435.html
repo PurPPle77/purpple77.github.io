@@ -74,7 +74,7 @@
             <div class="row justify-content-center align-items-center g-5 mt-5">
 
                 <div class="col-12 col-lg-6 my-3 d-flex justify-content-center align-items-center">
-                    <div class="ratio ratio-16x9"> <!-- composant bootstrap -->
+                    <div class="ratio ratio-16x9">
                         <video controls preload="auto">
                             <source src="vidéo/ParaZyteGameplay.mp4" type="video/mp4">
                             Votre navigateur ne supporte pas la lecture vidéo.
@@ -102,108 +102,111 @@
 
             <div class="row justify-content-center align-items-center p-2 pt-4">
                 <div class="col-12 col-lg-6">
-                    <img id="grosse-image" src="images_et_modeles/Maëlle/paysage_parasite.webp" alt="visualiser">
+                    <img id="grosse-image" src="images_et_modeles/Maëlle/paysage_parasite.webp" class="d-block"
+                        alt="visualiser">
                 </div>
             </div>
-            <!-- Carousel thumbnails -->
-            <div class="row justify-content-center">
-                <div class="col-12 d-flex justify-content-center align-items-center gap-2 m-2">
-                    <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="next"
-                        aria-label="Image suivante ">
-                        <i class="bi bi-chevron-double-left text-black"></i>
-                    </button>
+        </div>
 
-                    <div id="thumbCarousel" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
+        <!-- Carousel thumbnails -->
+        <div class="row justify-content-center">
+            <div class="col-12 d-flex justify-content-center align-items-center gap-2 m-2">
+                <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="next"
+                    aria-label="Image suivante ">
+                    <i class="bi bi-chevron-double-left text-black"></i>
+                </button>
 
-                            <!-- Slide 1 -->
-                            <div class="carousel-item active">
-                                <div class="d-flex justify-content-center gap-2">
-                                    <img id="th-img1" src="images_et_modeles/Maëlle/paysage_parasite.webp"
-                                        class="img-thumbnail" alt="thumb 1">
-                                    <img id="th-img2" src="images_et_modeles/Thomas/Batiment1_1_Neutre.webp"
-                                        class="img-thumbnail" alt="thumb 2">
-                                </div>
+                <div id="thumbCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <div class="d-flex justify-content-center gap-2">
+                                <img id="th-img1" src="images_et_modeles/Maëlle/paysage_parasite.webp"
+                                    class="img-thumbnail" alt="thumb 1">
+                                <img id="th-img2" src="images_et_modeles/Thomas/Batiment1_1_Neutre.webp"
+                                    class="img-thumbnail" alt="thumb 2">
                             </div>
-
-                            <!-- Slide 2 -->
-                            <div class="carousel-item">
-                                <div class="d-flex justify-content-center gap-2">
-                                    <img id="th-img3" src="images_et_modeles/Thomas/Batiment1_2_Neutre.webp"
-                                        class="img-thumbnail" alt="thumb 3">
-                                    <img id="th-img4" src="images_et_modeles/Gaétan/Rendu_Vaisseau_parasite.webp"
-                                        class="img-thumbnail" alt="thumb 4">
-                                </div>
-                            </div>
-
-                            <!-- Slide 3 -->
-                            <div class="carousel-item">
-                                <div class="d-flex justify-content-center gap-2">
-                                    <img id="th-img5" src="images_et_modeles/Thomas/Batiment1_1_Neutre.webp"
-                                        class="img-thumbnail" alt="thumb 5">
-                                    <img id="th-img6" src="images_et_modeles/Gaétan/Rendu_Vaisseau.webp"
-                                        class="img-thumbnail" alt="thumb 6">
-                                </div>
-                            </div>
-
                         </div>
+
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center gap-2">
+                                <img id="th-img3" src="images_et_modeles/Thomas/Batiment1_2_Neutre.webp"
+                                    class="img-thumbnail" alt="thumb 3">
+                                <img id="th-img4" src="images_et_modeles/Gaétan/Rendu_Vaisseau_parasite.webp"
+                                    class="img-thumbnail" alt="thumb 4">
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <div class="d-flex justify-content-center gap-2">
+                                <img id="th-img5" src="images_et_modeles/Thomas/Batiment1_1_Neutre.webp"
+                                    class="img-thumbnail" alt="thumb 5">
+                                <img id="th-img6" src="images_et_modeles/Gaétan/Rendu_Vaisseau.webp"
+                                    class="img-thumbnail" alt="thumb 6">
+                            </div>
+                        </div>
+
                     </div>
-
-                    <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="prev"
-                        aria-label="Image précédente">
-                        <i class="bi bi-chevron-double-right text-black"></i>
-                    </button>
                 </div>
+
+                <button type="button" class="chevronav" data-bs-target="#thumbCarousel" data-bs-slide="prev"
+                    aria-label="Image précédente">
+                    <i class="bi bi-chevron-double-right text-black"></i>
+                </button>
             </div>
+        </div>
 
 
-            <!-- Vidéos miniatures -->
+        <!-- Vidéos miniatures -->
 
-            <div class="row justify-content-center mt-2">
-                <div
-                    class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end align-items-center p-2 flex-column">
-                    <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
-                    <small class="text-white mt-2 text-center">
-                        <a href="http://www.freepik.com" class="text-white text-decoration-underline" target="_blank"
-                            rel="noopener noreferrer">
-                            Designed by starline / Freepik
-                        </a>
-                    </small>
-                </div>
-                <div
-                    class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-start align-items-center p-2 flex-column">
-                    <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
-                    <small class="text-white mt-2 text-center">
-                        <a href="http://www.freepik.com" class="text-white text-decoration-underline" target="_blank"
-                            rel="noopener noreferrer">
-                            Designed by starline / Freepik
-                        </a>
-                    </small>
-                </div>
+        <div class="row justify-content-center mt-2">
+            <div
+                class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center p-2 flex-column">
+                <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
+                <small class="text-white mt-2 text-center">
+                    <a href="http://www.freepik.com" class="text-white text-decoration-underline" target="_blank"
+                        rel="noopener noreferrer">
+                        Designed by starline / Freepik
+                    </a>
+                </small>
             </div>
-
-            <div class="row justify-content-center mt-2">
-                <div
-                    class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end align-items-center p-2 flex-column">
-                    <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
-                    <small class="text-white mt-2 text-center">
-                        <a href="http://www.freepik.com" class="text-white text-decoration-underline" target="_blank"
-                            rel="noopener noreferrer">
-                            Designed by starline / Freepik
-                        </a>
-                    </small>
-                </div>
-                <div
-                    class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-start align-items-center p-2 flex-column">
-                    <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
-                    <small class="text-white mt-2 text-center">
-                        <a href="http://www.freepik.com" class="text-white text-decoration-underline" target="_blank"
-                            rel="noopener noreferrer">
-                            Designed by starline / Freepik
-                        </a>
-                    </small>
-                </div>
+            <div
+                class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start align-items-center p-2 flex-column">
+                <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
+                <small class="text-white mt-2 text-center">
+                    <a href="http://www.freepik.com" class="text-white text-decoration-underline" target="_blank"
+                        rel="noopener noreferrer">
+                        Designed by starline / Freepik
+                    </a>
+                </small>
             </div>
+        </div>
+
+        <div class="row justify-content-center mt-2">
+            <div
+                class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-end align-items-center p-2 flex-column">
+                <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
+                <small class="text-white mt-2 text-center">
+                    <a href="http://www.freepik.com" class="text-white text-decoration-underline" target="_blank"
+                        rel="noopener noreferrer">
+                        Designed by starline / Freepik
+                    </a>
+                </small>
+            </div>
+            <div
+                class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start align-items-center p-2 flex-column">
+                <img src="images_et_modeles/coming_soon.webp" alt="Coming soon" class="mini-video rounded">
+                <small class="text-white mt-2 text-center">
+                    <a href="http://www.freepik.com" class="text-white text-decoration-underline" target="_blank"
+                        rel="noopener noreferrer">
+                        Designed by starline / Freepik
+                    </a>
+                </small>
+            </div>
+        </div>
 
         </div>
 
