@@ -19,7 +19,7 @@ Ce site présente :
 Déploiement
 
 Ce site est hébergé via **GitHub Pages**  
-[https://PurPPle77.github.io/ParaZyte-website](https://PurPPle77.github.io/ParaZyte-website)
+[https://PurPPle77.github.io/ParaZyte-website](https://PurPPle77.github.io)
 
 ---
 
