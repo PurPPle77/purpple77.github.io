@@ -1,6 +1,6 @@
 Parazyte - Site "officiel"^^
 
-Bienvenue sur le site vitrine du jeu **Parazyte**,un shooter immersif et destructible
+Bienvenue sur le site vitrine du jeu **Parazyte**, un railshooter immersif et ou presque tout est destructible !
 Site développé dans le cadre d’un projet de formation.
 
 **Télécharger le jeu :** [https://allanbd.itch.io/parazyte](https://allanbd.itch.io/parazyte)
